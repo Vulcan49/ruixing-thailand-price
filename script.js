@@ -45,128 +45,18 @@ const carData = {
 
 const charterBasePrice = {
   thai: {
-    sedan: {
-      bangkok: 2500,
-      pattaya: 3100,
-      huahin: 3450,
-      khaoyai: 3500,
-      ayutthaya: 2900,
-      rayong: 3800,
-      kanchanaburi: 3500,
-      prachinburi: 3900,
-      chanthaburi: 4400,
-      mae_klong: 3000
-    },
-    suv7: {
-      bangkok: 2700,
-      pattaya: 3500,
-      huahin: 3850,
-      khaoyai: 3800,
-      ayutthaya: 3200,
-      rayong: 3900,
-      kanchanaburi: 3700,
-      prachinburi: 4200,
-      chanthaburi: 4800,
-      mae_klong: 3400
-    },
-    v9: {
-      bangkok: 3300,
-      pattaya: 4100,
-      huahin: 4975,
-      khaoyai: 4300,
-      ayutthaya: 4100,
-      rayong: 4800,
-      kanchanaburi: 4500,
-      prachinburi: 4800,
-      chanthaburi: 5400,
-      mae_klong: 4000
-    },
-    v8: {
-      bangkok: 3800,
-      pattaya: 4400,
-      huahin: 5300,
-      khaoyai: 4800,
-      ayutthaya: 4600,
-      rayong: 5300,
-      kanchanaburi: 5000,
-      prachinburi: 5300,
-      chanthaburi: 5900,
-      mae_klong: 4300
-    },
-    alphard: {
-      bangkok: 7300,
-      pattaya: 7800,
-      huahin: 8300,
-      khaoyai: 8500,
-      ayutthaya: 7800,
-      rayong: 8500,
-      kanchanaburi: 8500,
-      prachinburi: 8800,
-      chanthaburi: 9300,
-      mae_klong: 7800
-    }
+    sedan: { bangkok: 2500, pattaya: 3100, huahin: 3450, khaoyai: 3500, ayutthaya: 2900, rayong: 3800, kanchanaburi: 3500, prachinburi: 3900, chanthaburi: 4400, mae_klong: 3000 },
+    suv7: { bangkok: 2700, pattaya: 3500, huahin: 3850, khaoyai: 3800, ayutthaya: 3200, rayong: 3900, kanchanaburi: 3700, prachinburi: 4200, chanthaburi: 4800, mae_klong: 3400 },
+    v9: { bangkok: 3300, pattaya: 4100, huahin: 4975, khaoyai: 4300, ayutthaya: 4100, rayong: 4800, kanchanaburi: 4500, prachinburi: 4800, chanthaburi: 5400, mae_klong: 4000 },
+    v8: { bangkok: 3800, pattaya: 4400, huahin: 5300, khaoyai: 4800, ayutthaya: 4600, rayong: 5300, kanchanaburi: 5000, prachinburi: 5300, chanthaburi: 5900, mae_klong: 4300 },
+    alphard: { bangkok: 7300, pattaya: 7800, huahin: 8300, khaoyai: 8500, ayutthaya: 7800, rayong: 8500, kanchanaburi: 8500, prachinburi: 8800, chanthaburi: 9300, mae_klong: 7800 }
   },
   chinese: {
-    sedan: {
-      bangkok: 3300,
-      pattaya: 3800,
-      huahin: 4300,
-      khaoyai: 4300,
-      ayutthaya: 3800,
-      rayong: 4300,
-      kanchanaburi: 4300,
-      prachinburi: 4800,
-      chanthaburi: 5300,
-      mae_klong: 3800
-    },
-    suv7: {
-      bangkok: 3800,
-      pattaya: 4300,
-      huahin: 4800,
-      khaoyai: 4800,
-      ayutthaya: 4300,
-      rayong: 4800,
-      kanchanaburi: 4800,
-      prachinburi: 5300,
-      chanthaburi: 5800,
-      mae_klong: 4300
-    },
-    v9: {
-      bangkok: 4300,
-      pattaya: 4800,
-      huahin: 5300,
-      khaoyai: 5300,
-      ayutthaya: 4800,
-      rayong: 5300,
-      kanchanaburi: 5300,
-      prachinburi: 5800,
-      chanthaburi: 6300,
-      mae_klong: 4800
-    },
-    v8: {
-      bangkok: 4800,
-      pattaya: 5300,
-      huahin: 5800,
-      khaoyai: 5800,
-      ayutthaya: 5300,
-      rayong: 5800,
-      kanchanaburi: 5800,
-      prachinburi: 6300,
-      chanthaburi: 6800,
-      mae_klong: 5300
-    },
-    alphard: {
-      bangkok: 7800,
-      pattaya: 8300,
-      huahin: 8800,
-      khaoyai: 9000,
-      ayutthaya: 8300,
-      rayong: 9000,
-      kanchanaburi: 9000,
-      prachinburi: 9300,
-      chanthaburi: 9800,
-      mae_klong: 8300
-    }
+    sedan: { bangkok: 3300, pattaya: 3800, huahin: 4300, khaoyai: 4300, ayutthaya: 3800, rayong: 4300, kanchanaburi: 4300, prachinburi: 4800, chanthaburi: 5300, mae_klong: 3800 },
+    suv7: { bangkok: 3800, pattaya: 4300, huahin: 4800, khaoyai: 4800, ayutthaya: 4300, rayong: 4800, kanchanaburi: 4800, prachinburi: 5300, chanthaburi: 5800, mae_klong: 4300 },
+    v9: { bangkok: 4300, pattaya: 4800, huahin: 5300, khaoyai: 5300, ayutthaya: 4800, rayong: 5300, kanchanaburi: 5300, prachinburi: 5800, chanthaburi: 6300, mae_klong: 4800 },
+    v8: { bangkok: 4800, pattaya: 5300, huahin: 5800, khaoyai: 5800, ayutthaya: 5300, rayong: 5800, kanchanaburi: 5800, prachinburi: 6300, chanthaburi: 6800, mae_klong: 5300 },
+    alphard: { bangkok: 7800, pattaya: 8300, huahin: 8800, khaoyai: 9000, ayutthaya: 8300, rayong: 9000, kanchanaburi: 9000, prachinburi: 9300, chanthaburi: 9800, mae_klong: 8300 }
   }
 };
 
@@ -202,115 +92,32 @@ const airportOptions = [
 
 const singleRoutePrices = {
   chinese: {
-    bangkok_city: {
-      sedan: 1000,
-      suv7: 1000,
-      v9: 1500,
-      v8: 2000,
-      alphard: 3500
-    },
-    bangkok_pattaya: {
-      sedan: 2000,
-      suv7: 2000,
-      v9: 2500,
-      v8: 3000,
-      alphard: null
-    }
+    bangkok_city: { sedan: 1000, suv7: 1000, v9: 1500, v8: 2000, alphard: 3500 },
+    bangkok_pattaya: { sedan: 2000, suv7: 2000, v9: 2500, v8: 3000, alphard: null }
   },
   thai: {
-    airport_bangkok: {
-      sedan: 550,
-      suv7: 680,
-      v8: 1050,
-      v9: 950,
-      alphard: 3500
-    },
-    airport_pattaya_bkk: {
-      sedan: 1150,
-      suv7: 1250,
-      v8: 2400,
-      v9: 1900,
-      alphard: 6000
-    },
-    airport_pattaya_dmk: {
-      sedan: 1450,
-      suv7: 1550,
-      v8: 2850,
-      v9: 2250,
-      alphard: 6500
-    },
-    airport_huahin_bkk: {
-      sedan: 1950,
-      suv7: 2050,
-      v8: 3450,
-      v9: 2800,
-      alphard: null
-    },
-    airport_huahin_dmk: {
-      sedan: 1950,
-      suv7: 2100,
-      v8: 3450,
-      v9: 2850,
-      alphard: null
-    },
-    airport_ayutthaya_bkk: {
-      sedan: 1150,
-      suv7: 1250,
-      v8: 2500,
-      v9: 2050,
-      alphard: null
-    },
-    airport_ayutthaya_dmk: {
-      sedan: 950,
-      suv7: 1050,
-      v8: 2450,
-      v9: 1800,
-      alphard: null
-    },
-    airport_rayong_bkk: {
-      sedan: 1700,
-      suv7: 1800,
-      v8: 2900,
-      v9: 2450,
-      alphard: null
-    },
-    airport_rayong_dmk: {
-      sedan: 1900,
-      suv7: 2000,
-      v8: 3450,
-      v9: 2850,
-      alphard: null
-    },
-    airport_transfer: {
-      sedan: 700,
-      suv7: 860,
-      v8: 1350,
-      v9: 1260,
-      alphard: null
-    },
-    bangkok_kanchanaburi: {
-      sedan: 1950,
-      suv7: 2180,
-      v8: 3500,
-      v9: 3050,
-      alphard: null
-    },
-    bangkok_banphe: {
-      sedan: 1900,
-      suv7: 2000,
-      v8: 3450,
-      v9: 2850,
-      alphard: null
-    },
-    bangkok_kohchang_pier: {
-      sedan: 3500,
-      suv7: 3800,
-      v8: 5200,
-      v9: 4800,
-      alphard: null
-    }
+    airport_bangkok: { sedan: 550, suv7: 680, v8: 1050, v9: 950, alphard: 3500 },
+    airport_pattaya_bkk: { sedan: 1150, suv7: 1250, v8: 2400, v9: 1900, alphard: 6000 },
+    airport_pattaya_dmk: { sedan: 1450, suv7: 1550, v8: 2850, v9: 2250, alphard: 6500 },
+    airport_huahin_bkk: { sedan: 1950, suv7: 2050, v8: 3450, v9: 2800, alphard: null },
+    airport_huahin_dmk: { sedan: 1950, suv7: 2100, v8: 3450, v9: 2850, alphard: null },
+    airport_ayutthaya_bkk: { sedan: 1150, suv7: 1250, v8: 2500, v9: 2050, alphard: null },
+    airport_ayutthaya_dmk: { sedan: 950, suv7: 1050, v8: 2450, v9: 1800, alphard: null },
+    airport_rayong_bkk: { sedan: 1700, suv7: 1800, v8: 2900, v9: 2450, alphard: null },
+    airport_rayong_dmk: { sedan: 1900, suv7: 2000, v8: 3450, v9: 2850, alphard: null },
+    airport_transfer: { sedan: 700, suv7: 860, v8: 1350, v9: 1260, alphard: null },
+    bangkok_kanchanaburi: { sedan: 1950, suv7: 2180, v8: 3500, v9: 3050, alphard: null },
+    bangkok_banphe: { sedan: 1900, suv7: 2000, v8: 3450, v9: 2850, alphard: null },
+    bangkok_kohchang_pier: { sedan: 3500, suv7: 3800, v8: 5200, v9: 4800, alphard: null }
   }
 };
+
+function bindAutoCalculate(container) {
+  container.querySelectorAll("input, select").forEach(el => {
+    el.addEventListener("change", calculatePrice);
+    el.addEventListener("input", calculatePrice);
+  });
+}
 
 function updateCarInfo() {
   const carKey = document.getElementById("carType").value;
@@ -353,7 +160,7 @@ function addTrip() {
 
         <div>
           <label>司机类型</label>
-          <select class="driver-type" onchange="refreshTripFields(${tripIndex})">
+          <select class="driver-type" onchange="refreshTripFields(${tripIndex}); calculatePrice();">
             <option value="thai">泰文司机</option>
             <option value="chinese">中文司机</option>
           </select>
@@ -361,7 +168,7 @@ function addTrip() {
 
         <div>
           <label>用车方式</label>
-          <select class="service-type" onchange="refreshTripFields(${tripIndex})">
+          <select class="service-type" onchange="refreshTripFields(${tripIndex}); calculatePrice();">
             <option value="charter">包车</option>
             <option value="single">单趟</option>
           </select>
@@ -399,7 +206,7 @@ function addTrip() {
               <option value="no">否</option>
               <option value="yes">是</option>
             </select>
-            <div class="helper-text">芭提雅/考艾 +500；华欣/北碧/罗勇 +1000</div>
+            <div class="red-helper">芭提雅/考艾 +500；华欣/北碧/罗勇 +1000</div>
           </div>
         </div>
 
@@ -410,7 +217,7 @@ function addTrip() {
             <label><input type="checkbox" class="extra-overnight" /> 外宿费 +500</label>
             <input type="number" class="extra-overnight-qty" min="1" placeholder="数量" />
           </div>
-          <div class="helper-text">外宿费说明：司机当天抵达曼谷以外目的地，且第二天仍需在曼谷以外地区继续包车时，需加外宿费。</div>
+          <div class="red-helper">外宿费说明：司机当天抵达曼谷以外目的地，且第二天仍需在曼谷以外地区继续包车时，需加外宿费。</div>
         </div>
 
         <div class="extra-item">
@@ -418,7 +225,7 @@ function addTrip() {
             <label class="extra-overtime-label"><input type="checkbox" class="extra-overtime" /> 超时费</label>
             <input type="number" class="extra-overtime-qty" min="1" step="0.5" placeholder="超时数量" />
           </div>
-          <div class="helper-text extra-overtime-text"></div>
+          <div class="red-helper extra-overtime-text"></div>
         </div>
 
         <div class="extra-item">
@@ -426,6 +233,7 @@ function addTrip() {
             <label><input type="checkbox" class="extra-siam" /> 暹罗古城 +300</label>
             <input type="number" class="extra-siam-qty" min="1" placeholder="数量" />
           </div>
+          <div class="red-helper">需要司机开车进入暹罗古城，不开车进入不用勾选。</div>
         </div>
 
         <div class="extra-item">
@@ -433,6 +241,7 @@ function addTrip() {
             <label><input type="checkbox" class="extra-zoo" /> 野生动物园开车进入费用 +300</label>
             <input type="number" class="extra-zoo-qty" min="1" placeholder="数量" />
           </div>
+          <div class="red-helper">需司机开车带客人进入陆地园区游玩，不开车进入不用勾选。</div>
         </div>
 
         <div class="extra-item">
@@ -440,6 +249,7 @@ function addTrip() {
             <label><input type="checkbox" class="extra-fotong" /> 佛统超区费 +300</label>
             <input type="number" class="extra-fotong-qty" min="1" placeholder="数量" />
           </div>
+          <div class="red-helper">曼谷前往佛统 Bubble in the forest Café 等佛统片区景点，需勾选。</div>
         </div>
 
         <div class="extra-item">
@@ -447,6 +257,7 @@ function addTrip() {
             <label><input type="checkbox" class="extra-danuen" /> 丹嫩美攻包车去佛统其他景点 +300</label>
             <input type="number" class="extra-danuen-qty" min="1" placeholder="数量" />
           </div>
+          <div class="red-helper">丹嫩沙多游玩结束需前往佛统 Bubble in the forest Café 等景点需勾选。</div>
         </div>
 
         <div class="extra-item">
@@ -454,13 +265,15 @@ function addTrip() {
             <label><input type="checkbox" class="extra-lion" /> 大城包车去狮子园 +500</label>
             <input type="number" class="extra-lion-qty" min="1" placeholder="数量" />
           </div>
+          <div class="red-helper">大城正常市区景点不需要勾选，去大城动物园需勾选。</div>
         </div>
 
-        <div class="extra-item">
+        <div class="extra-item chinese-airport-extra-wrap">
           <div class="extra-inline">
-            <label><input type="checkbox" class="extra-airport-trip" /> 包车 + 接机或送机 +500/趟</label>
+            <label><input type="checkbox" class="extra-airport-trip" /> 中文司机包车接送机 +500/趟</label>
             <input type="number" class="extra-airport-trip-qty" min="1" placeholder="数量" />
           </div>
+          <div class="red-helper">如接送机不需要绕路则不需要勾选，如芭提雅市区游玩-曼谷机场送机，不去曼谷市区则无需勾选。</div>
         </div>
       </div>
 
@@ -498,7 +311,7 @@ function addTrip() {
 
         <div class="extra-item">
           <div class="extra-inline">
-            <label><input type="checkbox" class="extra-hotel" /> 多酒店 +200</label>
+            <label><input type="checkbox" class="extra-hotel" /> 接送多个酒店 +200</label>
             <input type="number" class="extra-hotel-qty" min="1" placeholder="数量" />
           </div>
         </div>
@@ -508,13 +321,7 @@ function addTrip() {
             <label><input type="checkbox" class="extra-stop" /> 中途停10-30分钟 +200</label>
             <input type="number" class="extra-stop-qty" min="1" placeholder="数量" />
           </div>
-        </div>
-
-        <div class="extra-item">
-          <div class="extra-inline">
-            <label><input type="checkbox" class="extra-sign" /> 打印接机牌 +100</label>
-            <input type="number" class="extra-sign-qty" min="1" placeholder="数量" />
-          </div>
+          <div class="red-helper">顺路停靠，不绕路。</div>
         </div>
       </div>
 
@@ -526,6 +333,7 @@ function addTrip() {
 
   document.getElementById("tripList").insertAdjacentHTML("beforeend", tripHtml);
   initTrip(tripIndex);
+  calculatePrice();
 }
 
 function initTrip(id) {
@@ -536,6 +344,7 @@ function initTrip(id) {
   fillSelect(trip.querySelector(".airport-type"), airportOptions, "none");
   addRouteStop(id);
   refreshTripFields(id);
+  bindAutoCalculate(trip);
 }
 
 function fillSelect(selectEl, options, defaultValue = "") {
@@ -561,6 +370,8 @@ function addRouteStop(tripId) {
   `;
 
   routeList.insertAdjacentHTML("beforeend", routeHtml);
+  bindAutoCalculate(routeList.lastElementChild);
+  calculatePrice();
 }
 
 function removeRouteStop(btn) {
@@ -571,11 +382,13 @@ function removeRouteStop(btn) {
   labels.forEach((label, index) => {
     label.innerText = `目的地 ${index + 1}`;
   });
+  calculatePrice();
 }
 
 function removeTrip(id) {
   const item = document.getElementById(`trip-${id}`);
   if (item) item.remove();
+  calculatePrice();
 }
 
 function refreshAllTripFields() {
@@ -597,6 +410,7 @@ function refreshTripFields(id) {
   const charterSection = document.getElementById(`charter-section-${id}`);
   const singleSection = document.getElementById(`single-section-${id}`);
   const hoursSelect = trip.querySelector(".hours");
+  const chineseAirportExtraWrap = trip.querySelector(".chinese-airport-extra-wrap");
 
   if (serviceType === "charter") {
     charterSection.style.display = "block";
@@ -630,14 +444,24 @@ function refreshTripFields(id) {
 
   if (carKey === "sedan" || carKey === "suv7") {
     overtimeLabel.innerHTML = `<input type="checkbox" class="extra-overtime" /> 超时费（300泰铢/小时）`;
-    overtimeText.innerText = "超时超过30分钟按1小时计算";
+    overtimeText.innerText = "超时超过30分钟按1小时计算。";
   } else if (carKey === "v8" || carKey === "v9") {
     overtimeLabel.innerHTML = `<input type="checkbox" class="extra-overtime" /> 超时费（500泰铢/小时）`;
-    overtimeText.innerText = "超时超过30分钟按1小时计算";
+    overtimeText.innerText = "超时超过30分钟按1小时计算。";
   } else {
     overtimeLabel.innerHTML = `<input type="checkbox" class="extra-overtime" /> 超时费（250泰铢/半小时）`;
-    overtimeText.innerText = "阿尔法按半小时累计计算";
+    overtimeText.innerText = "阿尔法按半小时累计计算。";
   }
+
+  if (driverType === "chinese") {
+    chineseAirportExtraWrap.style.display = "block";
+  } else {
+    chineseAirportExtraWrap.style.display = "none";
+    trip.querySelector(".extra-airport-trip").checked = false;
+    trip.querySelector(".extra-airport-trip-qty").value = "";
+  }
+
+  bindAutoCalculate(trip);
 }
 
 function getQtyValue(checked, inputEl) {
@@ -762,11 +586,7 @@ function calculateCharterTrip(trip, carKey, index) {
     tripDetails.push("节假日附加：500 THB");
   }
 
-  const overnightFee = calculateExtra(
-    trip.querySelector(".extra-overnight").checked,
-    trip.querySelector(".extra-overnight-qty"),
-    500
-  );
+  const overnightFee = calculateExtra(trip.querySelector(".extra-overnight").checked, trip.querySelector(".extra-overnight-qty"), 500);
   if (overnightFee > 0) {
     tripTotal += overnightFee;
     tripDetails.push(`外宿费：${overnightFee} THB`);
@@ -814,10 +634,12 @@ function calculateCharterTrip(trip, carKey, index) {
     tripDetails.push(`大城包车去狮子园：${lionFee} THB`);
   }
 
-  const airportTripFee = calculateExtra(trip.querySelector(".extra-airport-trip").checked, trip.querySelector(".extra-airport-trip-qty"), 500);
-  if (airportTripFee > 0) {
-    tripTotal += airportTripFee;
-    tripDetails.push(`包车 + 接机或送机：${airportTripFee} THB`);
+  if (driverType === "chinese") {
+    const airportTripFee = calculateExtra(trip.querySelector(".extra-airport-trip").checked, trip.querySelector(".extra-airport-trip-qty"), 500);
+    if (airportTripFee > 0) {
+      tripTotal += airportTripFee;
+      tripDetails.push(`中文司机包车接送机：${airportTripFee} THB`);
+    }
   }
 
   const routeText = [start, ...stops].map(getLocationLabel).join(" → ");
@@ -840,10 +662,7 @@ function getChineseSinglePrice(carKey, start, end) {
     return singleRoutePrices.chinese.bangkok_city[carKey];
   }
 
-  if (
-    (start === "bangkok" && end === "pattaya") ||
-    (start === "pattaya" && end === "bangkok")
-  ) {
+  if ((start === "bangkok" && end === "pattaya") || (start === "pattaya" && end === "bangkok")) {
     return singleRoutePrices.chinese.bangkok_pattaya[carKey];
   }
 
@@ -856,76 +675,41 @@ function getThaiSinglePrice(carKey, singleType, start, end, airport) {
       return singleRoutePrices.thai.airport_bangkok[carKey];
     }
 
-    if (
-      (start === "bangkok" && end === "pattaya") ||
-      (start === "pattaya" && end === "bangkok")
-    ) {
-      return airport === "dmk"
-        ? singleRoutePrices.thai.airport_pattaya_dmk[carKey]
-        : singleRoutePrices.thai.airport_pattaya_bkk[carKey];
+    if ((start === "bangkok" && end === "pattaya") || (start === "pattaya" && end === "bangkok")) {
+      return airport === "dmk" ? singleRoutePrices.thai.airport_pattaya_dmk[carKey] : singleRoutePrices.thai.airport_pattaya_bkk[carKey];
     }
 
-    if (
-      (start === "bangkok" && end === "huahin") ||
-      (start === "huahin" && end === "bangkok")
-    ) {
-      return airport === "dmk"
-        ? singleRoutePrices.thai.airport_huahin_dmk[carKey]
-        : singleRoutePrices.thai.airport_huahin_bkk[carKey];
+    if ((start === "bangkok" && end === "huahin") || (start === "huahin" && end === "bangkok")) {
+      return airport === "dmk" ? singleRoutePrices.thai.airport_huahin_dmk[carKey] : singleRoutePrices.thai.airport_huahin_bkk[carKey];
     }
 
-    if (
-      (start === "bangkok" && end === "ayutthaya") ||
-      (start === "ayutthaya" && end === "bangkok")
-    ) {
-      return airport === "dmk"
-        ? singleRoutePrices.thai.airport_ayutthaya_dmk[carKey]
-        : singleRoutePrices.thai.airport_ayutthaya_bkk[carKey];
+    if ((start === "bangkok" && end === "ayutthaya") || (start === "ayutthaya" && end === "bangkok")) {
+      return airport === "dmk" ? singleRoutePrices.thai.airport_ayutthaya_dmk[carKey] : singleRoutePrices.thai.airport_ayutthaya_bkk[carKey];
     }
 
-    if (
-      (start === "bangkok" && end === "rayong") ||
-      (start === "rayong" && end === "bangkok")
-    ) {
-      return airport === "dmk"
-        ? singleRoutePrices.thai.airport_rayong_dmk[carKey]
-        : singleRoutePrices.thai.airport_rayong_bkk[carKey];
+    if ((start === "bangkok" && end === "rayong") || (start === "rayong" && end === "bangkok")) {
+      return airport === "dmk" ? singleRoutePrices.thai.airport_rayong_dmk[carKey] : singleRoutePrices.thai.airport_rayong_bkk[carKey];
     }
   }
 
   if (singleType === "normal_single") {
-    if (
-      (start === "bangkok" && end === "pattaya") ||
-      (start === "pattaya" && end === "bangkok")
-    ) {
+    if ((start === "bangkok" && end === "pattaya") || (start === "pattaya" && end === "bangkok")) {
       return singleRoutePrices.thai.airport_pattaya_dmk[carKey];
     }
 
-    if (
-      (start === "bangkok" && end === "kanchanaburi") ||
-      (start === "kanchanaburi" && end === "bangkok")
-    ) {
+    if ((start === "bangkok" && end === "kanchanaburi") || (start === "kanchanaburi" && end === "bangkok")) {
       return singleRoutePrices.thai.bangkok_kanchanaburi[carKey];
     }
 
-    if (
-      (start === "bangkok" && end === "rayong") ||
-      (start === "rayong" && end === "bangkok")
-    ) {
+    if ((start === "bangkok" && end === "rayong") || (start === "rayong" && end === "bangkok")) {
       return singleRoutePrices.thai.airport_rayong_dmk[carKey];
     }
 
-    if (
-      (start === "bangkok" && end === "huahin") ||
-      (start === "huahin" && end === "bangkok")
-    ) {
+    if ((start === "bangkok" && end === "huahin") || (start === "huahin" && end === "bangkok")) {
       return singleRoutePrices.thai.airport_huahin_dmk[carKey];
     }
 
-    if (
-      (start === "bangkok" && end === "ayutthaya") ||
-      (start === "ayutthaya" && end === "bangkok")
-    ) {
+    if ((start === "bangkok" && end === "ayutthaya") || (start === "ayutthaya" && end === "bangkok")) {
       return singleRoutePrices.thai.airport_ayutthaya_bkk[carKey];
     }
   }
@@ -999,19 +783,13 @@ function calculateSingleTrip(trip, carKey, index) {
   const hotelFee = calculateExtra(trip.querySelector(".extra-hotel").checked, trip.querySelector(".extra-hotel-qty"), 200);
   if (hotelFee > 0) {
     tripTotal += hotelFee;
-    tripDetails.push(`多酒店：${hotelFee} THB`);
+    tripDetails.push(`接送多个酒店：${hotelFee} THB`);
   }
 
   const stopFee = calculateExtra(trip.querySelector(".extra-stop").checked, trip.querySelector(".extra-stop-qty"), 200);
   if (stopFee > 0) {
     tripTotal += stopFee;
     tripDetails.push(`中途停10-30分钟：${stopFee} THB`);
-  }
-
-  const signFee = calculateExtra(trip.querySelector(".extra-sign").checked, trip.querySelector(".extra-sign-qty"), 100);
-  if (signFee > 0) {
-    tripTotal += signFee;
-    tripDetails.push(`打印接机牌：${signFee} THB`);
   }
 
   return {
@@ -1070,14 +848,12 @@ function calculatePrice() {
   }
 
   let notices = [];
-  if (hasNoDate) {
-    notices.push("未选日期的行程，未计入节假日浮动。");
-  }
-  if (hasManualConfirm) {
-    notices.push("部分线路或车型价格浮动，需单独确认。");
-  }
+  if (hasNoDate) notices.push("未选日期的行程，未计入节假日浮动。");
+  if (hasManualConfirm) notices.push("部分线路或车型价格浮动，需单独确认。");
   finalNoticeEl.innerText = notices.join(" ");
 }
 
 addTrip();
 updateCarInfo();
+bindAutoCalculate(document);
+calculatePrice();
