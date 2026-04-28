@@ -119,6 +119,13 @@ button:hover {
   margin-top: 6px;
 }
 
+.red-helper {
+  color: #b91c1c;
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
 .warning-text {
   margin-top: 10px;
   font-weight: bold;
