@@ -8,67 +8,144 @@
 </head>
 <body>
   <div class="container">
-    <h1>瑞行天下泰国核价系统</h1>
+    <h1 class="page-title">瑞行天下泰国核价系统</h1>
 
-    <div class="main-layout">
-      <div class="left-panel">
-        <div class="card">
-          <h2>行程信息</h2>
+    <div class="main-grid">
+      <div class="left-column">
+        <!-- 1. 基本信息 -->
+        <section class="card">
+          <h2>1. 选择车型与基本信息</h2>
 
-          <div class="top-grid">
+          <div class="basic-grid">
             <div>
               <label>车型</label>
-              <select id="carType" onchange="updateCarInfo(); refreshAllTripFields(); calculatePrice();">
-                <option value="sedan">5座轿车</option>
-                <option value="suv7">7座SUV</option>
-                <option value="v9">V9面包车</option>
-                <option value="v8">V8面包车</option>
-                <option value="alphard">阿尔法</option>
-              </select>
+              <select id="carType"></select>
             </div>
 
             <div>
               <label>人数</label>
-              <input type="number" id="passengerCount" min="1" value="2" oninput="updateCarInfo(); calculatePrice();" />
+              <input id="passengerCount" type="number" min="1" value="2" />
             </div>
 
             <div>
-              <label>日期 <span class="red-small">（选填）</span></label>
-              <input type="date" id="globalDate" onchange="calculatePrice()" />
-              <div class="red-tip">节假日用车必选</div>
+              <label>日期 <span class="red-text">（选填）</span></label>
+              <input id="globalDate" type="date" />
+              <div class="red-text small-text">节假日用车必选</div>
             </div>
           </div>
 
-          <div class="car-preview-box">
-            <div class="car-preview-left">
-              <img id="carPreview" src="images/sedan-1.jpg" alt="车型预览" />
+          <div class="vehicle-layout">
+            <div class="vehicle-photo-box">
+              <img id="vehicleMainImage" class="vehicle-main-image" src="" alt="车型图片" />
+              <div class="thumb-row" id="vehicleThumbRow"></div>
+              <a id="downloadVehicleImage" class="download-btn" href="#" download>下载车型图片</a>
             </div>
-            <div class="car-preview-right">
-              <h3 id="carTitle">5座轿车</h3>
-              <p id="carRule">建议 2-3人 + 3件行李</p>
-              <p id="carLuggage">行李参考：20-26寸</p>
-              <p id="carWarning" class="warning-text"></p>
-              <a id="downloadImage" href="images/sedan-1.jpg" download class="download-btn">下载车型图片</a>
+
+            <div class="vehicle-info-box">
+              <h3 id="vehicleTitle"></h3>
+
+              <div class="info-pill-row">
+                <div class="info-pill">
+                  <div class="pill-label">建议乘坐</div>
+                  <div class="pill-value" id="vehicleSeatAdvice"></div>
+                </div>
+                <div class="info-pill">
+                  <div class="pill-label">建议行李</div>
+                  <div class="pill-value" id="vehicleLuggageAdvice"></div>
+                </div>
+              </div>
+
+              <div class="vehicle-text" id="vehicleLuggageSize"></div>
+
+              <div class="vehicle-scene-title">适合场景</div>
+              <ul class="scene-list" id="vehicleScenes"></ul>
+
+              <div id="vehicleWarningBox" class="warning-box"></div>
             </div>
           </div>
+        </section>
 
+        <!-- 2. 行程信息 -->
+        <section class="card">
+          <div class="section-header">
+            <h2>2. 行程信息</h2>
+            <button type="button" class="add-btn" id="addTripBtn">+ 添加行程</button>
+          </div>
           <div id="tripList"></div>
+        </section>
 
-          <button type="button" onclick="addTrip()">+ 添加行程</button>
-        </div>
+        <!-- 3. 门票信息 -->
+        <section class="card">
+          <div class="section-header">
+            <h2>3. 门票信息</h2>
+            <button type="button" class="add-btn" id="addTicketBtn">+ 添加门票</button>
+          </div>
+          <div id="ticketList"></div>
+        </section>
       </div>
 
-      <div class="right-panel">
-        <div class="card result">
-          <h2>核价结果</h2>
-          <div id="resultDetail"></div>
-          <div id="finalNotice" class="final-notice"></div>
-          <h3 id="totalPrice">总价：0 THB</h3>
-        </div>
+      <div class="right-column">
+        <section class="card sticky-card">
+          <div class="panel-title">当前选择概览</div>
+          <div class="overview-body">
+            <img id="overviewImage" class="overview-image" src="" alt="当前车型" />
+
+            <div class="overview-row">
+              <span>车型</span>
+              <strong id="overviewCar"></strong>
+            </div>
+            <div class="overview-row">
+              <span>人数</span>
+              <strong id="overviewPassengers"></strong>
+            </div>
+            <div class="overview-row">
+              <span>日期</span>
+              <strong id="overviewDate"></strong>
+            </div>
+            <div class="overview-row">
+              <span>建议乘坐</span>
+              <strong id="overviewSeatAdvice"></strong>
+            </div>
+            <div class="overview-row">
+              <span>建议行李</span>
+              <strong id="overviewLuggageAdvice"></strong>
+            </div>
+            <div class="overview-row">
+              <span>行李参考</span>
+              <strong id="overviewLuggageSize"></strong>
+            </div>
+
+            <div id="overviewStatusBox" class="status-box"></div>
+          </div>
+        </section>
+
+        <section class="card sticky-card">
+          <div class="panel-title">报价结果</div>
+          <div class="result-body">
+            <div id="tripResultDetail"></div>
+            <div id="ticketResultDetail"></div>
+
+            <div class="result-sum-row">
+              <span>包车费用小计</span>
+              <strong id="tripSubtotal">0 THB</strong>
+            </div>
+            <div class="result-sum-row">
+              <span>门票费用小计</span>
+              <strong id="ticketSubtotal">0 THB</strong>
+            </div>
+            <div class="result-total-row">
+              <span>总价</span>
+              <strong id="grandTotal">0 THB</strong>
+            </div>
+
+            <div class="notice-box" id="finalNoticeBox"></div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
 
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
