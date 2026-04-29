@@ -87,9 +87,112 @@ const APP_DATA = {
     { value: "khaoyai", label: "考艾" }
   ],
 
-  tripDemoPrice: {
-    charterBase: 3500,
-    singleBase: 1200
+  charterBasePrice: {
+    thai: {
+      sedan: { bangkok: 2500, pattaya: 3100, huahin: 3450, khaoyai: 3500, ayutthaya: 2900, rayong: 3800, kanchanaburi: 3500 },
+      suv7: { bangkok: 2700, pattaya: 3500, huahin: 3850, khaoyai: 3800, ayutthaya: 3200, rayong: 3900, kanchanaburi: 3700 },
+      v9: { bangkok: 3300, pattaya: 4100, huahin: 4975, khaoyai: 4300, ayutthaya: 4100, rayong: 4800, kanchanaburi: 4500 },
+      v8: { bangkok: 3800, pattaya: 4400, huahin: 5300, khaoyai: 4800, ayutthaya: 4600, rayong: 5300, kanchanaburi: 5000 },
+      alphard: { bangkok: 7300, pattaya: 7800, huahin: 8300, khaoyai: 8500, ayutthaya: 7800, rayong: 8500, kanchanaburi: 8500 }
+    },
+    chinese: {
+      sedan: { bangkok: 3300, pattaya: 3800, huahin: 4300, khaoyai: 4300, ayutthaya: 3800, rayong: 4300, kanchanaburi: 4300 },
+      suv7: { bangkok: 3800, pattaya: 4300, huahin: 4800, khaoyai: 4800, ayutthaya: 4300, rayong: 4800, kanchanaburi: 4800 },
+      v9: { bangkok: 4300, pattaya: 4800, huahin: 5300, khaoyai: 5300, ayutthaya: 4800, rayong: 5300, kanchanaburi: 5300 },
+      v8: { bangkok: 4800, pattaya: 5300, huahin: 5800, khaoyai: 5800, ayutthaya: 5300, rayong: 5800, kanchanaburi: 5800 },
+      alphard: { bangkok: 7800, pattaya: 8300, huahin: 8800, khaoyai: 9000, ayutthaya: 8300, rayong: 9000, kanchanaburi: 9000 }
+    }
+  },
+
+  returnFees: {
+    pattaya: 500,
+    khaoyai: 500,
+    huahin: 1000,
+    kanchanaburi: 1000,
+    rayong: 1000
+  },
+
+  holidaySingleFees: {
+    noCross: { sedan: 100, suv7: 100, v8: 150, v9: 150, alphard: 300 },
+    cross: { sedan: 150, suv7: 150, v8: 200, v9: 200, alphard: 400 }
+  },
+
+  singleRoutePrices: {
+    chinese: {
+      bangkok_city: { sedan: 1000, suv7: 1000, v9: 1500, v8: 2000, alphard: 3500 },
+      bangkok_pattaya: { sedan: 2000, suv7: 2000, v9: 2500, v8: 3000, alphard: null }
+    },
+    thai: {
+      airport_bangkok: { sedan: 550, suv7: 680, v8: 1050, v9: 950, alphard: 3500 },
+      airport_pattaya_bkk: { sedan: 1150, suv7: 1250, v8: 2400, v9: 1900, alphard: 6000 },
+      airport_pattaya_dmk: { sedan: 1450, suv7: 1550, v8: 2850, v9: 2250, alphard: 6500 },
+      airport_huahin_bkk: { sedan: 1950, suv7: 2050, v8: 3450, v9: 2800, alphard: null },
+      airport_huahin_dmk: { sedan: 1950, suv7: 2100, v8: 3450, v9: 2850, alphard: null },
+      airport_ayutthaya_bkk: { sedan: 1150, suv7: 1250, v8: 2500, v9: 2050, alphard: null },
+      airport_ayutthaya_dmk: { sedan: 950, suv7: 1050, v8: 2450, v9: 1800, alphard: null },
+      airport_rayong_bkk: { sedan: 1700, suv7: 1800, v8: 2900, v9: 2450, alphard: null },
+      airport_rayong_dmk: { sedan: 1900, suv7: 2000, v8: 3450, v9: 2850, alphard: null },
+      bangkok_kanchanaburi: { sedan: 1950, suv7: 2180, v8: 3500, v9: 3050, alphard: null }
+    }
+  },
+
+  extras: {
+    single: {
+      multiHotel: { label: "接送多个酒店 +200", price: 200, note: "" },
+      stop1030: { label: "中途停10-30分钟 +200", price: 200, note: "顺路停靠，不绕路。" }
+    },
+    charter: {
+      overnight: {
+        label: "外宿费 +500",
+        price: 500,
+        note: "外宿费说明：司机当天抵达曼谷以外目的地，且第二天仍需在曼谷以外地区继续包车时，需加外宿费。"
+      },
+      overtimeSedanSuv: {
+        label: "超时费（5座/7座 300泰铢/小时）",
+        price: 300,
+        note: "超时超过30分钟按1小时计算。"
+      },
+      overtimeVan: {
+        label: "超时费（V8/V9 500泰铢/小时）",
+        price: 500,
+        note: "超时超过30分钟按1小时计算。"
+      },
+      overtimeAlphard: {
+        label: "超时费（阿尔法 250泰铢/半小时）",
+        price: 250,
+        note: "阿尔法按半小时累计计算。"
+      },
+      siam: {
+        label: "暹罗古城 +300",
+        price: 300,
+        note: "需要司机开车进入暹罗古城，不开车进入不用勾选。"
+      },
+      zoo: {
+        label: "野生动物园开车进入费用 +300",
+        price: 300,
+        note: "需司机开车带客人进入陆地园区游玩，不开车进入不用勾选。"
+      },
+      fotong: {
+        label: "佛统超区费 +300",
+        price: 300,
+        note: "曼谷前往佛统 Bubble in the forest Café 等佛统片区景点，需勾选。"
+      },
+      danuen: {
+        label: "丹嫩美攻包车去佛统其他景点 +300",
+        price: 300,
+        note: "丹嫩沙多游玩结束需前往佛统 Bubble in the forest Café 等景点需勾选。"
+      },
+      lion: {
+        label: "大城包车去狮子园 +500",
+        price: 500,
+        note: "大城正常市区景点不需要勾选，去大城动物园需勾选。"
+      },
+      airportChinese: {
+        label: "中文司机包车接送机 +500/趟",
+        price: 500,
+        note: "如接送机不需要绕路则不需要勾选，如芭提雅市区游玩-曼谷机场送机，不去曼谷市区则无需勾选。"
+      }
+    }
   },
 
   tickets: {
@@ -132,6 +235,6 @@ const APP_DATA = {
       note: "门票价格仅供参考，不含园内其他消费。"
     }
 
-    // 后面新增门票，直接复制上面任意一段，改 key、名字、价格、说明即可
+    // 新增门票时，复制上面任意一段，改 key、名字、价格、说明即可
   }
 };
