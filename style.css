@@ -284,6 +284,13 @@ button {
   gap: 12px;
 }
 
+.trip-extra-grid {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 10px;
+  align-items: center;
+}
+
 .ticket-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 0.8fr 0.9fr 0.8fr 0.9fr 0.8fr 0.9fr auto;
@@ -325,6 +332,18 @@ button {
   color: #fff;
   padding: 10px 14px;
   border-radius: 10px;
+}
+
+.extra-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.extra-label {
+  font-weight: 600;
 }
 
 .result-body {
@@ -373,6 +392,10 @@ button {
 .muted {
   color: #64748b;
   font-size: 13px;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 1200px) {
