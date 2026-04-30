@@ -15,16 +15,74 @@ body {
   margin: 0 auto;
 }
 
-.page-title {
-  text-align: center;
-  color: #0f2d63;
+.hero-banner {
   margin-bottom: 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 50%, rgba(255, 211, 134, 0.28), transparent 20%),
+    radial-gradient(circle at 85% 30%, rgba(255, 211, 134, 0.22), transparent 18%),
+    linear-gradient(135deg, #f5ead6 0%, #fff8ef 35%, #efe0c8 100%);
+  border: 1px solid #ead7b6;
+  position: relative;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(163, 123, 56, 0.06) 0 14px,
+      transparent 14px 28px
+    );
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 28px;
+}
+
+.hero-elephant {
+  font-size: 54px;
+  line-height: 1;
+}
+
+.hero-title-wrap {
+  flex: 1;
+}
+
+.page-title {
+  margin: 0;
+  color: #0f2d63;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.page-subtitle {
+  margin-top: 8px;
+  color: #8a5a12;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
 .main-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
+  align-items: start;
+}
+
+.left-column,
+.right-column {
+  min-width: 0;
 }
 
 .card {
@@ -33,11 +91,6 @@ body {
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
   padding: 20px;
   margin-bottom: 20px;
-}
-
-.sticky-card {
-  position: sticky;
-  top: 20px;
 }
 
 .panel-title {
@@ -117,30 +170,11 @@ button {
 
 .vehicle-main-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   border-radius: 12px;
   display: block;
-}
-
-.thumb-row {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;
-}
-
-.thumb-row img {
-  width: 88px;
-  height: 66px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
-.thumb-row img.active {
-  border-color: #2563eb;
+  background: #fff;
 }
 
 .download-btn {
@@ -235,6 +269,7 @@ button {
   border-radius: 12px;
   display: block;
   margin-bottom: 18px;
+  background: #fff;
 }
 
 .overview-row {
@@ -244,6 +279,21 @@ button {
   padding: 10px 0;
   border-bottom: 1px solid #eef2f7;
   font-size: 15px;
+}
+
+.overview-subsection {
+  margin-top: 18px;
+}
+
+.overview-subtitle {
+  font-weight: 700;
+  color: #0f2d63;
+  margin-bottom: 8px;
+}
+
+.summary-list > div {
+  padding: 6px 0;
+  border-bottom: 1px dashed #e5e7eb;
 }
 
 .section-header {
@@ -284,16 +334,16 @@ button {
   gap: 12px;
 }
 
-.trip-extra-grid {
+.trip-grid-2 {
   display: grid;
-  grid-template-columns: 1fr 120px;
-  gap: 10px;
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .ticket-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 0.8fr 0.9fr 0.8fr 0.9fr 0.8fr 0.9fr auto;
+  grid-template-columns: 1.2fr 1.2fr 1fr 0.8fr 0.9fr 0.8fr 0.9fr 0.8fr 0.9fr auto;
   gap: 10px;
   align-items: end;
 }
@@ -334,12 +384,44 @@ button {
   border-radius: 10px;
 }
 
+details.fold-box {
+  margin-top: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+details.fold-box summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 16px;
+  font-weight: 700;
+  color: #0f2d63;
+  background: #f8fbff;
+}
+
+details.fold-box summary::-webkit-details-marker {
+  display: none;
+}
+
+.fold-body {
+  padding: 0 14px 14px;
+}
+
 .extra-item {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 12px;
   background: #fff;
   margin-top: 10px;
+}
+
+.trip-extra-grid {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 10px;
+  align-items: center;
 }
 
 .extra-label {
@@ -389,27 +471,39 @@ button {
   font-size: 14px;
 }
 
+.action-row {
+  margin-top: 12px;
+}
+
+.copy-btn {
+  background: #0f2d63;
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
 .muted {
   color: #64748b;
   font-size: 13px;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 1200px) {
-  .main-grid {
-    grid-template-columns: 1fr;
+  body {
+    padding: 14px;
   }
 
-  .sticky-card {
-    position: static;
+  .main-grid {
+    grid-template-columns: 1fr;
   }
 
   .vehicle-layout,
   .basic-grid,
   .trip-grid,
+  .trip-grid-2,
   .ticket-grid,
   .info-pill-row {
     grid-template-columns: 1fr;
