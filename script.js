@@ -1036,7 +1036,12 @@ async function copyQuoteAsImage() {
     alert("当前环境不支持直接复制，已改为下载图片。");
   });
 }
-
+function initBaseSelectors() {
+  const carSelect = document.getElementById("carType");
+  carSelect.innerHTML = getCarKeys()
+    .map(key => `<option value="${key}">${APP_DATA.cars[key].name}</option>`)
+    .join("");
+}
 function init() {
   initBaseSelectors();
   bindBaseEvents();
