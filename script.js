@@ -705,7 +705,149 @@ function createTicketItemOptions(groupKey, selected = "") {
     .map(([key, item]) => `<option value="${key}" ${selected === key ? "selected" : ""}>${item.label}</option>`)
     .join("");
 }
+const TICKET_SEARCH_HISTORY_KEY = "ruixing_ticket_search_history_v1";
 
+function getTicketGroupEntries() {
+  return Object.entries(APP_DATA.ticketGroups);
+}
+
+function getTicketSearchHistory() {
+  try {
+    const raw = localStorage.getItem(TICKET_SEARCH_HISTORY_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveTicketSearchHistory(list) {
+  localStorage.setItem(TICKET_SEARCH_HISTORY_KEY, JSON.stringify(list.slice(0, 10)));
+}
+
+function pushTicketSearchHistory(keyword) {
+  const text = (keyword || "").trim();
+  if (!text) return;
+  const current = getTicketSearchHistory().filter(item => item !== text);
+  current.unshift(text);
+  saveTicketSearchHistory(current.slice(0, 10));
+}
+
+function filterTicketGroups(keyword) {
+  const text = (keyword || "").trim().toLowerCase();
+  const entries = getTicketGroupEntries();
+
+  if (!text) return entries;
+
+  return entries.filter(([groupKey, group]) => {
+    if ((group.label || "").toLowerCase().includes(text)) return true;
+
+    return Object.values(group.items || {}).some(item => {
+      return (item.label || "").toLowerCase().includes(text);
+    });
+  });
+}
+
+function createFilteredTicketGroupOptions(keyword = "", selected = "") {
+  const filtered = filterTicketGroups(keyword);
+  if (!filtered.length) return "";
+
+  return filtered
+    .map(([key, group]) => `<option value="${key}" ${selected === key ? "selected" : ""}>${group.label}</option>`)
+    .join("");
+}
+
+function renderTicketSearchHistory(card, keyword = "") {
+  const box = card.querySelector(".ticket-search-history");
+  if (!box) return;
+
+  const history = getTicketSearchHistory();
+  box.innerHTML = "";
+
+  if (!history.length) {
+    box.innerHTML = `<div class="muted">暂无搜索记录</div>`;
+    return;
+  }
+
+  history.slice(0, 10).forEach(item => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = item;
+    btn.className = "history-chip";
+    btn.style.width = "auto";
+    btn.style.padding = "6px 10px";
+    btn.style.fontSize = "12px";
+    btn.style.borderRadius = "999px";
+    btn.style.background = keyword === item ? "#0f2d63" : "#eef2ff";
+    btn.style.color = keyword === item ? "#fff" : "#0f2d63";
+    btn.style.border = "1px solid #c7d2fe";
+    btn.style.margin = "0 8px 8px 0";
+
+    btn.addEventListener("click", () => {
+      const input = card.querySelector(".ticket-search-input");
+      input.value = item;
+      applyTicketSearch(card, item, true);
+    });
+
+    box.appendChild(btn);
+  });
+}
+
+function applyTicketSearch(card, keyword = "", saveHistoryFlag = false) {
+  const groupSelect = card.querySelector(".ticket-group-key");
+  const itemSelect = card.querySelector(".ticket-item-key");
+  const oldGroupKey = groupSelect.value;
+  const filtered = filterTicketGroups(keyword);
+
+  groupSelect.innerHTML = createFilteredTicketGroupOptions(keyword, oldGroupKey);
+
+  if (!filtered.length) {
+    groupSelect.innerHTML = `<option value="">未找到匹配景点</option>`;
+    itemSelect.innerHTML = `<option value="">无可选项目</option>`;
+    renderTicketSearchHistory(card, keyword);
+    updateAllResults();
+    return;
+  }
+
+  const validGroupKeys = filtered.map(([key]) => key);
+  let nextGroupKey = oldGroupKey;
+
+  if (!validGroupKeys.includes(oldGroupKey)) {
+    nextGroupKey = filtered[0][0];
+  }
+
+  groupSelect.value = nextGroupKey;
+  itemSelect.innerHTML = createTicketItemOptions(nextGroupKey);
+  applyTicketItemData(card);
+
+  if (saveHistoryFlag && keyword.trim()) {
+    pushTicketSearchHistory(keyword.trim());
+  }
+
+  renderTicketSearchHistory(card, keyword);
+  saveState();
+}
+
+function bindTicketSearchEvents(card) {
+  const input = card.querySelector(".ticket-search-input");
+  if (!input) return;
+
+  input.addEventListener("input", () => {
+    applyTicketSearch(card, input.value, false);
+  });
+
+  input.addEventListener("change", () => {
+    const text = input.value.trim();
+    if (text) {
+      pushTicketSearchHistory(text);
+      renderTicketSearchHistory(card, text);
+      saveState();
+    }
+  });
+
+  renderTicketSearchHistory(card, input.value || "");
+}
 function createTicketCard(index, data = null) {
   const firstGroupKey = Object.keys(APP_DATA.ticketGroups)[0];
   const firstItemKey = Object.keys(APP_DATA.ticketGroups[firstGroupKey].items)[0];
@@ -715,7 +857,8 @@ function createTicketCard(index, data = null) {
     date: "",
     adultCount: 1,
     childCount: 0,
-    infantCount: 0
+    infantCount: 0,
+    searchKeyword: ""
   }, data || {});
 
   const card = document.createElement("div");
@@ -725,11 +868,24 @@ function createTicketCard(index, data = null) {
   card.innerHTML = `
     <div class="ticket-title">第 ${index + 1} 个门票</div>
 
+    <div class="ticket-note-box" style="margin-bottom: 12px;">
+      <div class="ticket-note-title">搜索景点</div>
+      <input
+        class="ticket-search-input"
+        type="text"
+        placeholder="输入景点名称，如：大皇宫 / 郑王庙 / 野生动物园"
+        value="${ticket.searchKeyword || ""}"
+        style="margin-bottom: 10px;"
+      />
+      <div class="ticket-note-text" style="margin-bottom: 8px;">往日搜索记录</div>
+      <div class="ticket-search-history"></div>
+    </div>
+
     <div class="ticket-grid">
       <div>
         <label>景点</label>
         <select class="ticket-group-key">
-          ${createTicketGroupOptions(ticket.groupKey)}
+          ${createFilteredTicketGroupOptions(ticket.searchKeyword || "", ticket.groupKey)}
         </select>
       </div>
 
@@ -788,6 +944,17 @@ function createTicketCard(index, data = null) {
   `;
 
   bindTicketCardEvents(card);
+  bindTicketSearchEvents(card);
+
+  const groupSelect = card.querySelector(".ticket-group-key");
+  if (!groupSelect.value) {
+    const firstFiltered = filterTicketGroups(ticket.searchKeyword || "");
+    if (firstFiltered.length) {
+      groupSelect.value = firstFiltered[0][0];
+      card.querySelector(".ticket-item-key").innerHTML = createTicketItemOptions(firstFiltered[0][0]);
+    }
+  }
+
   applyTicketItemData(card);
   bindDatePickerOpen(card);
   return card;
