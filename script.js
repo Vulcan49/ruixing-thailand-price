@@ -963,10 +963,18 @@ function createTicketCard(index, data = null) {
 function bindTicketCardEvents(card) {
   const groupSelect = card.querySelector(".ticket-group-key");
   const itemSelect = card.querySelector(".ticket-item-key");
+  const searchInput = card.querySelector(".ticket-search-input");
 
   groupSelect.addEventListener("change", () => {
     itemSelect.innerHTML = createTicketItemOptions(groupSelect.value);
     applyTicketItemData(card);
+
+    const selectedText = groupSelect.options[groupSelect.selectedIndex]?.text || "";
+    if (selectedText) {
+      pushTicketSearchHistory(selectedText);
+      renderTicketSearchHistory(card, searchInput.value || "");
+    }
+
     saveState();
   });
 
