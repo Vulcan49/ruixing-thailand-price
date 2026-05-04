@@ -368,4 +368,5 @@ night_chao_phraya_cruise: {
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     }
   }
+}
 };
