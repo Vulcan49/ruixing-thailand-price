@@ -368,6 +368,177 @@ night_chao_phraya_cruise: {
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     }
   }
+},
+    ancient_city: {
+  label: "暹罗古城",
+  items: {
+    ancient_city_ticket: {
+      label: "暹罗古城",
+      adultPrice: 300,
+      childPrice: 240,
+      infantPrice: 0,
+      description: "古城可开车进入，+300泰铢的司机油费",
+      note: "儿童：6-14岁（含）"
+    },
+    ancient_city_buffet: {
+      label: "暹罗古城+自助餐",
+      adultPrice: 460,
+      childPrice: 380,
+      infantPrice: 150,
+      description: "含餐",
+      note: "儿童：6-14岁（含）；婴儿：2-4岁"
+    },
+    erawan_ancient_city: {
+      label: "三头神象+暹罗古城",
+      adultPrice: 450,
+      childPrice: 320,
+      infantPrice: 0,
+      description: "",
+      note: "儿童：6-14岁（含）"
+    },
+    erawan_ancient_city_buffet: {
+      label: "三头神象+暹罗古城+自助餐",
+      adultPrice: 610,
+      childPrice: 450,
+      infantPrice: 150,
+      description: "",
+      note: "儿童：6-14岁（含）；婴儿：2-4岁"
+    }
+  }
+},
+
+bangkok_elephant_camp: {
+  label: "曼谷大象保护营",
+  items: {
+    elephant_camp_halfday_transfer: {
+      label: "半日游上/下半场",
+      adultPrice: 1550,
+      childPrice: 1350,
+      infantPrice: 0,
+      description: "含接送，上午7-8点开始接，下午11-12点开始接",
+      note: "儿童：4-9岁（含）；婴儿：3岁以下免费"
+    },
+    elephant_camp_halfday_no_transfer: {
+      label: "不含接送 半日游上/下半场",
+      adultPrice: 1350,
+      childPrice: 1050,
+      infantPrice: 0,
+      description: "不含接送，自行前往，上午场9点赶到，下午场13点赶到",
+      note: "儿童：4-9岁（含）；婴儿：3岁以下免费"
+    }
+  }
+},
+
+colosseum_show: {
+  label: "金东尼人妖秀",
+  items: {
+    colosseum_regular: {
+      label: "普通座",
+      adultPrice: 345,
+      childPrice: 185,
+      infantPrice: 0,
+      description: "时间表：17:00-18:00 / 20:00-21:00",
+      note: "儿童：4-12岁（含）；婴儿：3岁以下免费"
+    },
+    colosseum_vip: {
+      label: "VIP座",
+      adultPrice: 450,
+      childPrice: 235,
+      infantPrice: 0,
+      description: "时间表：17:00-18:00 / 20:00-21:00",
+      note: "儿童：4-12岁（含）；婴儿：3岁以下免费"
+    }
+  }
+},
+
+pattaya_night_show: {
+  label: "芭提雅夜秀",
+  items: {
+    pattaya_night_show_69_79_89_99: {
+      label: "69/79/89/99",
+      adultPrice: 650,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "19:00-22:00（循环场次）",
+      note: "18岁以下禁止观看"
+    }
+  }
+},
+
+tiffany_show: {
+  label: "蒂芙尼人妖秀",
+  items: {
+    tiffany_regular: {
+      label: "普通座",
+      adultPrice: 950,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "每天 17:00 - 23:00",
+      note: "大小同价，身高未满100公分且不占位的孩童免费入场"
+    },
+    tiffany_silver: {
+      label: "白银座",
+      adultPrice: 1250,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "每天 17:00 - 23:00",
+      note: "大小同价，身高未满100公分且不占位的孩童免费入场"
+    },
+    tiffany_gold: {
+      label: "黄金座",
+      adultPrice: 1550,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "每天 17:00 - 23:00",
+      note: "大小同价，身高未满100公分且不占位的孩童免费入场"
+    },
+    tiffany_diamond: {
+      label: "钻石座",
+      adultPrice: 1850,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "每天 17:00 - 23:00",
+      note: "大小同价，身高未满100公分且不占位的孩童免费入场"
+    }
+  }
+},
+
+mxa_muay_thai: {
+  label: "MXA泰拳",
+  items: {
+    mxa_vip: {
+      label: "VIP票",
+      adultPrice: 650,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "每天 19:30 - 20:30（可客人自取）",
+      note: "大小同价，身高未满120公分且不占位的孩童免费入场"
+    }
+  }
+},
+
+sea_banquet_carnival: {
+  label: "海天盛筵嘉年华",
+  items: {
+    sea_banquet_regular: {
+      label: "普通座",
+      adultPrice: 1080,
+      childPrice: 730,
+      infantPrice: 0,
+      description: "每天18:00 / 19:30两场（可客人自取）",
+      note: "年龄4岁以下且身高不超过90CM与父母同座免费"
+    },
+    sea_banquet_vip: {
+      label: "VIP",
+      adultPrice: 1800,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "每天18:00 / 19:30两场（可客人自取）",
+      note: "年龄4岁以下且身高不超过90CM与父母同座免费"
+    }
+  }
 }
 }
 };
+
+
