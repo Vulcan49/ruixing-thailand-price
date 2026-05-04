@@ -232,7 +232,20 @@ const APP_DATA = {
         }
       }
     },
-
+    
+wat_pho: {
+  label: "卧佛寺",
+  items: {
+    wat_pho_ticket: {
+      label: "门票",
+      adultPrice: 300,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "儿童不满120cm免票。",
+      note: "卧佛寺不能停车，如附近可停车司机代买，如附近无法停车则司机给钱客人，客人购买门票。"
+    }
+  }
+},
     safari_world: {
       label: "曼谷亚洲野生动物园",
       items: {
