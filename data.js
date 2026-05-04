@@ -244,7 +244,7 @@ const APP_DATA = {
           description: "100cm以下免费。",
           note: "仅含首道门票，不含园内其他消费。"
         },
-        safari_world_combo: {
+        marine_park_ticket: {
           label: "海洋乐园",
           adultPrice: 740,
           childPrice: 740,
@@ -252,7 +252,7 @@ const APP_DATA = {
           description: "100cm以下免费。",
           note: "仅含首道门票，不含园内其他消费。"
          },
-        safari_world_combo: {
+        safari_marine_combo: {
           label: "野生动物园+海洋乐园",
           adultPrice: 790,
           childPrice: 790,
@@ -260,7 +260,7 @@ const APP_DATA = {
           description: "100cm以下免费。",
           note: "仅含首道门票，不含园内其他消费。"
          },
-        safari_world_combo: {
+        marine_lunch_combo: {
           label: "海洋乐园+自助中餐",
           adultPrice: 820,
           childPrice: 820,
@@ -268,7 +268,7 @@ const APP_DATA = {
           description: "100cm以下免费。",
           note: "仅含首道门票，不含园内其他消费。"
          },
-        safari_world_combo: {
+        safari_marine_lunch_combo: {
           label: "野生动物园+海洋乐园+自助中餐",
           adultPrice: 920,
           childPrice: 920,
@@ -276,7 +276,7 @@ const APP_DATA = {
           description: "100cm以下免费。",
           note: "仅含首道门票，不含园内其他消费。"
          },
-        safari_world_combo: {
+        boat_combo: {
           label: "乘船观光",
           adultPrice: 250,
           childPrice: 250,
