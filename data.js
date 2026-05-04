@@ -369,4 +369,5 @@ night_chao_phraya_cruise: {
     }
   }
 }
+}
 };
