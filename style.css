@@ -509,3 +509,12 @@ details.fold-box summary::-webkit-details-marker {
     grid-template-columns: 1fr;
   }
 }
+.ticket-card input[type="number"]::-webkit-outer-spin-button,
+.ticket-card input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ticket-card input[type="number"] {
+  -moz-appearance: textfield;
+}
