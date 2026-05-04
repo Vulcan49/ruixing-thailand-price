@@ -848,6 +848,13 @@ function bindTicketSearchEvents(card) {
 
   renderTicketSearchHistory(card, input.value || "");
 }
+function createCountOptions(selected = 0, max = 20) {
+  let html = "";
+  for (let i = 0; i <= max; i++) {
+    html += `<option value="${i}" ${Number(selected) === i ? "selected" : ""}>${i}</option>`;
+  }
+  return html;
+}
 function createTicketCard(index, data = null) {
   const firstGroupKey = Object.keys(APP_DATA.ticketGroups)[0];
   const firstItemKey = Object.keys(APP_DATA.ticketGroups[firstGroupKey].items)[0];
@@ -903,7 +910,9 @@ function createTicketCard(index, data = null) {
 
       <div>
         <label>成人数量</label>
-        <input class="ticket-adult-count" type="number" min="0" value="${ticket.adultCount}" />
+       <select class="ticket-adult-count">
+  ${createCountOptions(ticket.adultCount)}
+</select>
       </div>
 
       <div>
@@ -913,7 +922,9 @@ function createTicketCard(index, data = null) {
 
       <div>
         <label>儿童数量</label>
-        <input class="ticket-child-count" type="number" min="0" value="${ticket.childCount}" />
+        <select class="ticket-child-count">
+  ${createCountOptions(ticket.childCount)}
+</select>
       </div>
 
       <div>
@@ -923,7 +934,9 @@ function createTicketCard(index, data = null) {
 
       <div>
         <label>婴儿数量</label>
-        <input class="ticket-infant-count" type="number" min="0" value="${ticket.infantCount}" />
+      <select class="ticket-infant-count">
+  ${createCountOptions(ticket.infantCount)}
+</select>
       </div>
 
       <div>
