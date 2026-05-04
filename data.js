@@ -246,6 +246,50 @@ wat_pho: {
     }
   }
 },
+    bangkok_national_museum: {
+  label: "曼谷国家博物馆",
+  items: {
+    bangkok_national_museum_ticket: {
+      label: "门票",
+      adultPrice: 250,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: ""
+    },
+    bangkok_national_museum_cn_guide: {
+      label: "中文讲解",
+      adultPrice: 1500,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "1团10人以内价格（旺季上涨500）"
+    }
+  }
+},
+
+wat_paknam_boat: {
+  label: "水门寺游船",
+  items: {
+    wat_paknam_boat_under_10: {
+      label: "10人以下",
+      adultPrice: 1500,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "价格为一艘船的价格，30分钟"
+    },
+    wat_paknam_boat_10_25: {
+      label: "10-25人",
+      adultPrice: 3000,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "价格为一艘船的价格，30分钟"
+    }
+  }
+},
+
     safari_world: {
       label: "曼谷亚洲野生动物园",
       items: {
@@ -535,6 +579,263 @@ sea_banquet_carnival: {
       infantPrice: 0,
       description: "每天18:00 / 19:30两场（可客人自取）",
       note: "年龄4岁以下且身高不超过90CM与父母同座免费"
+    }
+  }
+},
+floating_market: {
+  label: "四方水上市场",
+  items: {
+    floating_market_ticket: {
+      label: "门票",
+      adultPrice: 100,
+      childPrice: 40,
+      infantPrice: 0,
+      description: "",
+      note: "身高不超过90cm免费"
+    },
+    floating_market_ticket_boat: {
+      label: "门票+手划船",
+      adultPrice: 150,
+      childPrice: 90,
+      infantPrice: 0,
+      description: "",
+      note: "身高不超过90cm免费"
+    }
+  }
+},
+
+elephant_cafe: {
+  label: "大象咖啡馆",
+  items: {
+    elephant_cafe_drink_show: {
+      label: "咖啡或饮料+表演",
+      adultPrice: 320,
+      childPrice: 260,
+      infantPrice: 0,
+      description: "",
+      note: "2岁以下婴儿免费，儿童3-12岁"
+    },
+    elephant_cafe_two_person_10_15: {
+      label: "2人骑大象10-15分钟",
+      adultPrice: 320,
+      childPrice: 265,
+      infantPrice: 0,
+      description: "1象载2人，不含表演；2人一组，一定一组才能预订；不含门票",
+      note: "2岁以下婴儿免费，儿童3-12岁"
+    },
+    elephant_cafe_two_person_25_30: {
+      label: "2人骑大象25-30分钟",
+      adultPrice: 630,
+      childPrice: 530,
+      infantPrice: 0,
+      description: "1象载2人，含表演+饮料；2人一组，一定要够一组才能预订",
+      note: "2岁以下婴儿免费，儿童3-12岁"
+    },
+    elephant_cafe_two_person_40_45: {
+      label: "2人骑大象40-45分钟",
+      adultPrice: 800,
+      childPrice: 580,
+      infantPrice: 0,
+      description: "1象载2人，含表演+饮料；2人一组，一定要够一组才能预订",
+      note: "2岁以下婴儿免费，儿童3-12岁"
+    },
+    elephant_cafe_one_person_10_15: {
+      label: "1人骑大象10-15分钟",
+      adultPrice: 430,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "1象载1人，不含表演；不含门票/饮料/表演",
+      note: "大小同价"
+    },
+    elephant_cafe_one_person_25_30: {
+      label: "1人骑大象25-30分钟",
+      adultPrice: 830,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "1象载1人，不含表演；含门票/饮料/表演",
+      note: "大小同价"
+    },
+    elephant_cafe_one_person_40_45: {
+      label: "1人骑大象40-45分钟",
+      adultPrice: 1080,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "1象载1人，不含表演；含门票/饮料/表演",
+      note: "大小同价"
+    }
+  }
+},
+
+pattaya_elephant_village_safari: {
+  label: "芭提雅大象村Safari",
+  items: {
+    elephant_two_person_30: {
+      label: "2人骑大象30分钟",
+      adultPrice: 350,
+      childPrice: 250,
+      infantPrice: 0,
+      description: "",
+      note: "110cm以下算儿童价，以上算成人价，2人一头大象"
+    },
+    elephant_two_person_60: {
+      label: "2人骑大象60分钟",
+      adultPrice: 650,
+      childPrice: 350,
+      infantPrice: 0,
+      description: "",
+      note: "110cm以下算儿童价，以上算成人价，2人一头大象"
+    },
+    elephant_one_person_30: {
+      label: "1人骑大象30分钟",
+      adultPrice: 750,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价，1人骑行"
+    },
+    elephant_one_person_60: {
+      label: "1人骑大象60分钟",
+      adultPrice: 1450,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价，1人骑行"
+    },
+    horse_30: {
+      label: "骑马30分钟",
+      adultPrice: 750,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    horse_60: {
+      label: "骑马60分钟",
+      adultPrice: 1450,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    atv_30: {
+      label: "ATV 30分钟",
+      adultPrice: 750,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    atv_60: {
+      label: "ATV 60分钟",
+      adultPrice: 1450,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    small_buggy_30: {
+      label: "小型 Buggy越野车 30分钟",
+      adultPrice: 950,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    small_buggy_60: {
+      label: "小型 Buggy越野车 60分钟",
+      adultPrice: 1850,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    large_buggy_30: {
+      label: "大型 Buggy越野车 30分钟",
+      adultPrice: 1550,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    large_buggy_60: {
+      label: "大型 Buggy越野车 60分钟",
+      adultPrice: 3050,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    kart_10: {
+      label: "卡丁车 10 分钟",
+      adultPrice: 950,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    bungee_jump: {
+      label: "丛林蹦极",
+      adultPrice: 1850,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    flyboard_10: {
+      label: "水上飞人 10分钟",
+      adultPrice: 1250,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    flyboard_15: {
+      label: "水上飞人 15分钟",
+      adultPrice: 1550,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    flyboard_20: {
+      label: "水上飞人 20分钟",
+      adultPrice: 2250,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    zipline_15: {
+      label: "丛林飞跃15站",
+      adultPrice: 850,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    zipline_26: {
+      label: "丛林飞跃26站",
+      adultPrice: 1050,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    zipline_32: {
+      label: "丛林飞跃32站",
+      adultPrice: 1350,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
+    },
+    zipline_58: {
+      label: "丛林飞跃58站",
+      adultPrice: 2050,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价"
     }
   }
 }
