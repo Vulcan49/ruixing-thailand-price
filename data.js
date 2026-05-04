@@ -298,6 +298,76 @@ wat_pho: {
           note: "仅含首道门票，不含园内其他消费。"
         }
       }
+    },
+
+    night_chao_phraya_cruise: {
+  label: "夜游湄南河",
+  items: {
+    white_orchid_sunset: {
+      label: "白玉兰夕阳游",
+      adultPrice: 610,
+      childPrice: 450,
+      infantPrice: 0,
+      description: "不含酒水",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    white_orchid_night: {
+      label: "白玉兰夜游",
+      adultPrice: 800,
+      childPrice: 560,
+      infantPrice: 0,
+      description: "不含酒水",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    royal_princess_night: {
+      label: "皇家公主夜游",
+      adultPrice: 850,
+      childPrice: 640,
+      infantPrice: 0,
+      description: "不含酒水",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    grand_pearl_night: {
+      label: "大珍珠夜游",
+      adultPrice: 950,
+      childPrice: 700,
+      infantPrice: 0,
+      description: "不含酒水",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    carnival_night: {
+      label: "嘉年华夜游",
+      adultPrice: 950,
+      childPrice: 720,
+      infantPrice: 0,
+      description: "男模互动，不含酒水",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    sawasdee_night: {
+      label: "萨瓦迪夜游",
+      adultPrice: 1000,
+      childPrice: 900,
+      infantPrice: 0,
+      description: "新船，不含酒水",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    luxury_white_orchid_night: {
+      label: "奢华白玉兰夜游",
+      adultPrice: 1030,
+      childPrice: 850,
+      infantPrice: 0,
+      description: "含免费啤酒",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    royal_galaxy_night: {
+      label: "皇家银河夜游",
+      adultPrice: 1120,
+      childPrice: 900,
+      infantPrice: 0,
+      description: "不含酒水",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     }
   }
+},
+  
 };
