@@ -1156,14 +1156,15 @@ function gatherState() {
     };
   });
 
-  const tickets = [...document.querySelectorAll(".ticket-card")].map(card => ({
-    groupKey: card.querySelector(".ticket-group-key").value,
-    itemKey: card.querySelector(".ticket-item-key").value,
-    date: card.querySelector(".ticket-date").value,
-    adultCount: card.querySelector(".ticket-adult-count").value,
-    childCount: card.querySelector(".ticket-child-count").value,
-    infantCount: card.querySelector(".ticket-infant-count").value
-  }));
+ const tickets = [...document.querySelectorAll(".ticket-card")].map(card => ({
+  groupKey: card.querySelector(".ticket-group-key").value,
+  itemKey: card.querySelector(".ticket-item-key").value,
+  date: card.querySelector(".ticket-date").value,
+  adultCount: card.querySelector(".ticket-adult-count").value,
+  childCount: card.querySelector(".ticket-child-count").value,
+  infantCount: card.querySelector(".ticket-infant-count").value,
+  searchKeyword: card.querySelector(".ticket-search-input")?.value || ""
+}));
 
   return {
     carType: document.getElementById("carType").value,
