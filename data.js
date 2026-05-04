@@ -344,6 +344,20 @@ wat_paknam_boat: {
       }
     },
 
+    damuen_saduak_boat: {
+  label: "丹嫩沙多游船",
+  items: {
+    damuen_saduak_row_boat_15: {
+      label: "手摇船15分钟",
+      adultPrice: 400,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "价格为一艘船的价格，6人一艘船，超人数请2艘船"
+    }
+  }
+},
+
 night_chao_phraya_cruise: {
   label: "夜游湄南河",
   items: {
@@ -352,7 +366,7 @@ night_chao_phraya_cruise: {
       adultPrice: 610,
       childPrice: 450,
       infantPrice: 0,
-      description: "不含酒水",
+      description: "不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     },
     white_orchid_night: {
@@ -360,7 +374,7 @@ night_chao_phraya_cruise: {
       adultPrice: 800,
       childPrice: 560,
       infantPrice: 0,
-      description: "不含酒水",
+      description: "不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     },
     royal_princess_night: {
@@ -368,7 +382,7 @@ night_chao_phraya_cruise: {
       adultPrice: 850,
       childPrice: 640,
       infantPrice: 0,
-      description: "不含酒水",
+      description: "不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     },
     grand_pearl_night: {
@@ -376,7 +390,7 @@ night_chao_phraya_cruise: {
       adultPrice: 950,
       childPrice: 700,
       infantPrice: 0,
-      description: "不含酒水",
+      description: "不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     },
     carnival_night: {
@@ -384,7 +398,7 @@ night_chao_phraya_cruise: {
       adultPrice: 950,
       childPrice: 720,
       infantPrice: 0,
-      description: "男模互动，不含酒水",
+      description: "男模互动，不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     },
     sawasdee_night: {
@@ -392,7 +406,7 @@ night_chao_phraya_cruise: {
       adultPrice: 1000,
       childPrice: 900,
       infantPrice: 0,
-      description: "新船，不含酒水",
+      description: "新船，不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     },
     luxury_white_orchid_night: {
@@ -400,7 +414,7 @@ night_chao_phraya_cruise: {
       adultPrice: 1030,
       childPrice: 850,
       infantPrice: 0,
-      description: "含免费啤酒",
+      description: "含免费啤酒，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     },
     royal_galaxy_night: {
@@ -408,7 +422,7 @@ night_chao_phraya_cruise: {
       adultPrice: 1120,
       childPrice: 900,
       infantPrice: 0,
-      description: "不含酒水",
+      description: "不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     }
   }
@@ -447,6 +461,20 @@ night_chao_phraya_cruise: {
       infantPrice: 150,
       description: "",
       note: "儿童：6-14岁（含）；婴儿：2-4岁"
+    }
+  }
+},
+
+    sanctuary_of_truth: {
+  label: "真理寺",
+  items: {
+    sanctuary_of_truth_ticket: {
+      label: "门票",
+      adultPrice: 400,
+      childPrice: 200,
+      infantPrice: 0,
+      description: "",
+      note: "儿童：身高110cm-140cm（含）；婴儿：身高110cm以下"
     }
   }
 },
