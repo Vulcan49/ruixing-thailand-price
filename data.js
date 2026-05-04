@@ -300,7 +300,7 @@ wat_pho: {
       }
     },
 
-    night_chao_phraya_cruise: {
+night_chao_phraya_cruise: {
   label: "夜游湄南河",
   items: {
     white_orchid_sunset: {
@@ -368,4 +368,4 @@ wat_pho: {
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     }
   }
-};
+},
