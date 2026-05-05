@@ -866,6 +866,68 @@ pattaya_elephant_village_safari: {
       note: "大小同价"
     }
   }
+},
+
+ayutthaya_zoo: {
+  label: "大城动物园",
+  items: {
+    ayutthaya_zoo_ticket: {
+      label: "门票",
+      adultPrice: 250,
+      childPrice: 85,
+      infantPrice: 0,
+      description: "",
+      note: "儿童：身高140cm（含）或8岁以下；婴儿：1岁以下"
+    },
+    tiger_walk: {
+      label: "老虎散步",
+      adultPrice: 950,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价，免费A4带框照片打印"
+    },
+    giraffe_photo: {
+      label: "长颈鹿合影",
+      adultPrice: 950,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价，含1个食物篮，免费照片，当天预定+1050"
+    },
+    jaguar_photo: {
+      label: "美洲豹合影",
+      adultPrice: 750,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价，免费A4带框照片打印"
+    },
+    capybara_photo: {
+      label: "水豚合影",
+      adultPrice: 350,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价，免费A4带框照片打印"
+    },
+    crocodile_photo: {
+      label: "鳄鱼合影",
+      adultPrice: 350,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价，免费A4带框照片打印"
+    },
+    white_tiger_photo: {
+      label: "白虎合影",
+      adultPrice: 550,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "",
+      note: "大小同价，免费A4带框照片打印"
+    }
+  }
 }
 }
 };
