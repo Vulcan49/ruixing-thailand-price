@@ -380,8 +380,13 @@ button {
   width: auto;
   background: #dc2626;
   color: #fff;
-  padding: 10px 14px;
+  padding: 0 14px;
+  height: 48px;
+  line-height: 48px;
   border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 details.fold-box {
