@@ -928,6 +928,166 @@ ayutthaya_zoo: {
       note: "大小同价，免费A4带框照片打印"
     }
   }
+},
+    ayutthaya_boat_tour: {
+  label: "大城游船",
+  items: {
+    s_boat_island: {
+      label: "S号船 环岛",
+      adultPrice: 1100,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人游船，仅环大城岛乘船，不上岸",
+      note: "1小时｜1-8人｜1100/船"
+    },
+    s_boat_island_elephant: {
+      label: "S号船 环岛+大象洗澡",
+      adultPrice: 1300,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人游船环大城岛，并观看大象洗澡",
+      note: "1.5小时｜1-8人｜1300/船"
+    },
+    s_boat_island_3temples: {
+      label: "S号船 环岛+3寺庙",
+      adultPrice: 1300,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人游船环大城岛，包含3座寺庙",
+      note: "2小时｜1-8人，可选择更换其他寺庙，寺庙门票自理｜1300/船"
+    },
+    s_boat_island_3temples_elephant: {
+      label: "S号船 环岛+3寺庙+大象洗澡",
+      adultPrice: 1500,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人游船环大城岛，包含3座寺庙，并观看大象洗澡",
+      note: "2.5小时｜1-8人，可选择更换其他寺庙，寺庙门票自理｜1500/船"
+    },
+
+    m_boat_island: {
+      label: "M号船 环岛",
+      adultPrice: 1600,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人游船，仅环大城岛乘船，不上岸",
+      note: "1小时｜12-15人｜1600/船"
+    },
+    m_boat_island_elephant: {
+      label: "M号船 环岛+大象洗澡",
+      adultPrice: 1800,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人游船环大城岛，并观看大象洗澡",
+      note: "1.5小时｜12-15人｜1800/船"
+    },
+    m_boat_island_3temples: {
+      label: "M号船 环岛+3寺庙",
+      adultPrice: 1800,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人游船环大城岛，包含3座寺庙",
+      note: "2小时｜12-15人，可选择更换其他寺庙，寺庙门票自理｜1800/船"
+    },
+    m_boat_island_3temples_elephant: {
+      label: "M号船 环岛+3寺庙+大象洗澡",
+      adultPrice: 2000,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人游船环大城岛，包含3座寺庙，并观看大象洗澡",
+      note: "2.5小时｜12-15人，可选择更换其他寺庙，寺庙门票自理｜2000/船"
+    },
+
+    m_dining_boat_2_4: {
+      label: "M号餐船｜环岛+船餐｜2小时｜2-4人",
+      adultPrice: 4000,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人餐船，环大城岛+船上用餐，每桌可选4道菜",
+      note: "含米饭、饮料、软饮、冰块、水果；全包价，无额外收费｜4000/船"
+    },
+    m_dining_boat_4_8: {
+      label: "M号餐船｜环岛+船餐｜2小时｜4-8人",
+      adultPrice: 5000,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "私人餐船，环大城岛+船上用餐，每桌可选7道菜",
+      note: "含米饭、饮料、软饮、冰块、水果；全包价，无额外收费｜5000/船"
+    },
+
+    l_dining_boat_8: {
+      label: "L号餐船｜环岛+船餐｜2小时｜8人",
+      adultPrice: 8000,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "大型私人餐船，环大城岛+船上用餐，每桌可选8道菜+水果",
+      note: "含米饭、饮料、冰块、软饮、男女洗手间、卡拉OK、水上安全设备、乘客保险；全包价，无额外收费｜8000/船"
+    },
+    l_dining_boat_16: {
+      label: "L号餐船｜环岛+船餐｜2小时｜16人",
+      adultPrice: 9800,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "大型私人餐船，环大城岛+船上用餐，每桌可选8道菜+水果",
+      note: "含米饭、饮料、冰块、软饮、男女洗手间、卡拉OK、水上安全设备、乘客保险；全包价，无额外收费｜9800/船"
+    },
+
+    xl_dining_boat_24: {
+      label: "XL号餐船｜环岛+船餐｜2小时｜24人",
+      adultPrice: 13000,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "大型私人餐船，环大城岛+船上用餐，每桌可选8道菜+水果",
+      note: "含米饭、饮料、冰块、软饮、男女洗手间、卡拉OK、水上安全设备、乘客保险；全包价，无额外收费｜13000/船"
+    },
+    xl_dining_boat_32: {
+      label: "XL号餐船｜环岛+船餐｜2小时｜32人",
+      adultPrice: 520,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "大型私人餐船，环大城岛+船上用餐，每桌可选8道菜+水果",
+      note: "含米饭、饮料、冰块、软饮、男女洗手间、卡拉OK、水上安全设备、乘客保险；全包价，无额外收费｜520/人"
+    },
+    xl_dining_boat_40_plus: {
+      label: "XL号餐船｜环岛+船餐｜2小时｜40人及以上",
+      adultPrice: 480,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "大型私人餐船，环大城岛+船上用餐，每桌可选8道菜+水果",
+      note: "含米饭、饮料、冰块、软饮、男女洗手间、卡拉OK、水上安全设备、乘客保险；全包价，无额外收费｜480/人"
+    },
+
+    large_boat_hourly: {
+      label: "大型船按小时租赁｜1小时｜1-72人",
+      adultPrice: 3000,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "大型船活动租赁，可根据客人需求安排活动",
+      note: "含男女洗手间、卡拉OK、2支麦克风、电视、网络/演示设备、水上安全设备、乘客保险｜3000/小时/船"
+    }
+  }
+},
+
+ayutthaya_tuktuk: {
+  label: "大城嘟嘟车",
+  items: {
+    tuktuk_hourly: {
+      label: "按小时租用",
+      adultPrice: 300,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "大城市区内嘟嘟车服务，可按小时租用",
+      note: "仅限大城市区内服务，可按照客人计划前往各个指定地点｜可容纳5-6人｜请提前4天预定，旺季请提前7天"
+    },
+    tuktuk_7hours: {
+      label: "7小时包车",
+      adultPrice: 1700,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "大城市区内嘟嘟车全天包车服务",
+      note: "仅限大城市区内服务，可按照客人计划前往各个指定地点｜可容纳5-6人｜请提前4天预定，旺季请提前7天"
+    }
+  }
 }
 }
 };
