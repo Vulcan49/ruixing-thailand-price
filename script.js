@@ -1244,6 +1244,11 @@ function init() {
     addTicket();
     saveState();
   });
+  
+  document.getElementById("addTicketBtnBottom").addEventListener("click", () => {
+  addTicket();
+  saveState();
+});
 
   document.getElementById("copyQuoteBtn").addEventListener("click", copyQuoteAsImage);
 
