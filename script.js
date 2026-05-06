@@ -1240,6 +1240,11 @@ function init() {
     saveState();
   });
 
+  document.getElementById("addTripBtnBottom").addEventListener("click", () => {
+  addTrip();
+  saveState();
+});
+
   document.getElementById("addTicketBtn").addEventListener("click", () => {
     addTicket();
     saveState();
