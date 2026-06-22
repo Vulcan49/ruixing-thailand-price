@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>访问统计 - 瑞行天下泰国核价系统</title>
+  <script src="https://counterapi.com/c.js?ns=ruixing-thailand-price.vulcan49.github.io" async></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --ink: #10233f;
+      --muted: #5e6b7f;
+      --line: #d9e2ef;
+      --accent: #0f2d63;
+      --accent-soft: #e9eef9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+      color: var(--ink);
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 18px 50px rgba(15, 45, 99, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 16px 40px rgba(15, 45, 99, 0.06);
+    }
+
+    .label {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .counterapi {
+      min-height: 56px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn.secondary {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent-soft);
+    }
+
+    .tip {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: #fff8e8;
+      border: 1px solid #f3e1b5;
+      color: #6b5300;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>网站访问统计</h1>
+      <p>这里可以直接查看当前网站的总访问量和最近 24 小时访问量。更细的按天趋势，请点击下方“查看详细日报表”。</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="label">总访问量</div>
+        <div
+          class="counterapi"
+          key="homepage"
+          action="view"
+          label="次访问"
+          icon="stats-chart"
+          bg="#0f2d63"
+          color="#ffffff"
+          iconColor="#ffd166"
+          noLink="true"
+          startNumber="0"
+          readOnly="true"
+        ></div>
+      </div>
+
+      <div class="card">
+        <div class="label">最近 24 小时访问量</div>
+        <div
+          class="counterapi"
+          key="homepage"
+          action="view"
+          label="近24小时"
+          icon="today"
+          bg="#1d4e89"
+          color="#ffffff"
+          iconColor="#8ecae6"
+          noLink="true"
+          startNumber="0"
+          readOnly="true"
+          timeline="1d"
+        ></div>
+      </div>
+    </section>
+
+    <div class="links">
+      <a class="btn" href="https://counterapi.com/ruixing-thailand-price.vulcan49.github.io/view/homepage" target="_blank" rel="noreferrer">查看详细日报表</a>
+      <a class="btn secondary" href="./index.html">返回核价系统</a>
+    </div>
+
+    <div class="tip">
+      说明：总访问量会随着页面打开持续累计；“最近 24 小时访问量”用于看当天热度。详细日报表页面里可以继续看历史变化趋势。
+    </div>
+  </div>
+</body>
+</html>
