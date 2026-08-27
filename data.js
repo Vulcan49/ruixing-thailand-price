@@ -163,8 +163,8 @@ const APP_DATA = {
         note: "曼谷前往佛统 Bubble in the forest Café 等佛统片区景点，需勾选。"
       },
       danuen: {
-        label: "丹嫩美攻包车去佛统其他景点 +300",
-        price: 300,
+        label: "丹嫩美攻包车去佛统其他景点 +500",
+        price: 500,
         note: "丹嫩沙多游玩结束需前往佛统 Bubble in the forest Café 等景点需勾选。"
       },
       lion: {
@@ -229,6 +229,14 @@ const APP_DATA = {
           infantPrice: 0,
           description: "请按实际选购数量填写。",
           note: "价格仅供参考。"
+        },
+        wat_arun_ferry: {
+          label: "过河船票",
+          adultPrice: 10,
+          childPrice: 10,
+          infantPrice: 0,
+          description: "如需过河前往郑王庙购票可选。",
+          note: "需要司机将车停在郑王庙对面，坐船带客人去买票时可加此项。"
         }
       }
     },
@@ -251,11 +259,11 @@ wat_pho: {
   items: {
     bangkok_national_museum_ticket: {
       label: "门票",
-      adultPrice: 250,
+      adultPrice: 200,
       childPrice: 0,
       infantPrice: 0,
       description: "",
-      note: ""
+      note: "以上门票按每团50泰铢操作费+门票费用收取结算。"
     },
     bangkok_national_museum_cn_guide: {
       label: "中文讲解",
@@ -377,6 +385,30 @@ night_chao_phraya_cruise: {
       description: "不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
     },
+    unicorn_night: {
+      label: "尤妮卡号(独角兽号)",
+      adultPrice: 750,
+      childPrice: 650,
+      infantPrice: 0,
+      description: "不含酒水，情人节/元旦价格另寻",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    viva_alangka_night: {
+      label: "VIVA 阿郎卡",
+      adultPrice: 800,
+      childPrice: 620,
+      infantPrice: 0,
+      description: "不含酒水，情人节/元旦价格另寻",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
+    alangka_night: {
+      label: "阿郎卡号",
+      adultPrice: 820,
+      childPrice: 620,
+      infantPrice: 0,
+      description: "不含酒水，情人节/元旦价格另寻",
+      note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
+    },
     royal_princess_night: {
       label: "皇家公主夜游",
       adultPrice: 850,
@@ -387,8 +419,8 @@ night_chao_phraya_cruise: {
     },
     grand_pearl_night: {
       label: "大珍珠夜游",
-      adultPrice: 950,
-      childPrice: 700,
+      adultPrice: 1150,
+      childPrice: 800,
       infantPrice: 0,
       description: "不含酒水，情人节/元旦价格另寻",
       note: "儿童：4-10岁（含）；婴儿：4岁以下且身高不超过90CM免费。"
@@ -471,10 +503,10 @@ night_chao_phraya_cruise: {
     sanctuary_of_truth_ticket: {
       label: "门票",
       adultPrice: 400,
-      childPrice: 200,
+      childPrice: 400,
       infantPrice: 0,
       description: "",
-      note: "儿童：身高110cm-140cm（含）；婴儿：身高110cm以下"
+      note: "大小同价，身高110cm以下婴儿免费。"
     }
   }
 },
@@ -484,7 +516,7 @@ bangkok_elephant_camp: {
   items: {
     elephant_camp_halfday_transfer: {
       label: "半日游上/下半场",
-      adultPrice: 1550,
+      adultPrice: 1600,
       childPrice: 1350,
       infantPrice: 0,
       description: "含接送，上午7-8点开始接，下午11-12点开始接",
@@ -492,8 +524,8 @@ bangkok_elephant_camp: {
     },
     elephant_camp_halfday_no_transfer: {
       label: "不含接送 半日游上/下半场",
-      adultPrice: 1350,
-      childPrice: 1050,
+      adultPrice: 1380,
+      childPrice: 1100,
       infantPrice: 0,
       description: "不含接送，自行前往，上午场9点赶到，下午场13点赶到",
       note: "儿童：4-9岁（含）；婴儿：3岁以下免费"
@@ -526,8 +558,32 @@ colosseum_show: {
 pattaya_night_show: {
   label: "芭提雅夜秀",
   items: {
-    pattaya_night_show_69_79_89_99: {
-      label: "69/79/89/99",
+    pattaya_night_show_69: {
+      label: "69秀",
+      adultPrice: 600,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "19:00-22:00（循环场次）",
+      note: "18岁以下禁止观看"
+    },
+    pattaya_night_show_79: {
+      label: "79秀",
+      adultPrice: 650,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "19:00-22:00（循环场次）",
+      note: "18岁以下禁止观看"
+    },
+    pattaya_night_show_89: {
+      label: "89秀",
+      adultPrice: 650,
+      childPrice: 0,
+      infantPrice: 0,
+      description: "19:00-22:00（循环场次）",
+      note: "18岁以下禁止观看"
+    },
+    pattaya_night_show_99: {
+      label: "99秀",
       adultPrice: 650,
       childPrice: 0,
       infantPrice: 0,
@@ -543,7 +599,7 @@ tiffany_show: {
     tiffany_regular: {
       label: "普通座",
       adultPrice: 950,
-      childPrice: 0,
+      childPrice: 950,
       infantPrice: 0,
       description: "每天 17:00 - 23:00",
       note: "大小同价，身高未满100公分且不占位的孩童免费入场"
@@ -551,7 +607,7 @@ tiffany_show: {
     tiffany_silver: {
       label: "白银座",
       adultPrice: 1250,
-      childPrice: 0,
+      childPrice: 1250,
       infantPrice: 0,
       description: "每天 17:00 - 23:00",
       note: "大小同价，身高未满100公分且不占位的孩童免费入场"
@@ -559,7 +615,7 @@ tiffany_show: {
     tiffany_gold: {
       label: "黄金座",
       adultPrice: 1550,
-      childPrice: 0,
+      childPrice: 1550,
       infantPrice: 0,
       description: "每天 17:00 - 23:00",
       note: "大小同价，身高未满100公分且不占位的孩童免费入场"
@@ -567,7 +623,7 @@ tiffany_show: {
     tiffany_diamond: {
       label: "钻石座",
       adultPrice: 1850,
-      childPrice: 0,
+      childPrice: 1850,
       infantPrice: 0,
       description: "每天 17:00 - 23:00",
       note: "大小同价，身高未满100公分且不占位的孩童免费入场"
@@ -580,7 +636,7 @@ mxa_muay_thai: {
   items: {
     mxa_vip: {
       label: "VIP票",
-      adultPrice: 650,
+      adultPrice: 700,
       childPrice: 0,
       infantPrice: 0,
       description: "每天 19:30 - 20:30（可客人自取）",
@@ -602,7 +658,7 @@ sea_banquet_carnival: {
     },
     sea_banquet_vip: {
       label: "VIP",
-      adultPrice: 1800,
+      adultPrice: 1780,
       childPrice: 0,
       infantPrice: 0,
       description: "每天18:00 / 19:30两场（可客人自取）",
