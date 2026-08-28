@@ -480,12 +480,19 @@ function getExtraCrossCount(start, stops) {
   return extra;
 }
 
-function getChineseSinglePrice(carKey, start, end) {
+function getChineseSinglePrice(carKey, singleType, start, end, airport) {
+  const table = APP_DATA.singleRoutePrices.chinese;
+  if (carKey === "alphard" && singleType === "airport_pickup") {
+    if (start === "bangkok" && end === "bangkok") return table.airport_bangkok.alphard;
+    if ((start === "bangkok" && end === "pattaya") || (start === "pattaya" && end === "bangkok")) {
+      return airport === "dmk" ? table.airport_pattaya_dmk.alphard : table.airport_pattaya_bkk.alphard;
+    }
+  }
   if (start === "bangkok" && end === "bangkok") {
-    return APP_DATA.singleRoutePrices.chinese.bangkok_city[carKey];
+    return table.bangkok_city[carKey];
   }
   if ((start === "bangkok" && end === "pattaya") || (start === "pattaya" && end === "bangkok")) {
-    return APP_DATA.singleRoutePrices.chinese.bangkok_pattaya[carKey];
+    return table.bangkok_pattaya[carKey];
   }
   return null;
 }
@@ -629,8 +636,8 @@ function calculateTripLine(card, index) {
   let basePrice = null;
 
   if (driverType === "chinese") {
-    basePrice = getChineseSinglePrice(carKey, start, end);
-    if (carKey === "alphard") manualConfirm = true;
+    basePrice = getChineseSinglePrice(carKey, singleType, start, end, airport);
+    if (carKey === "alphard" && basePrice == null) manualConfirm = true;
   } else {
     basePrice = getThaiSinglePrice(carKey, singleType, start, end, airport);
     if (carKey === "alphard" && basePrice == null) manualConfirm = true;
@@ -1288,3 +1295,4 @@ function init() {
 }
 
 init();
+
