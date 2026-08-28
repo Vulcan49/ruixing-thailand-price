@@ -74,18 +74,18 @@ const APP_DATA = {
 
   charterBasePrice: {
     thai: {
-      sedan: { bangkok: 1900, pattaya: 2500, huahin: 2850, khaoyai: 2900, ayutthaya: 2300, rayong: 3200, kanchanaburi: 2900 },
-      suv7: { bangkok: 2100, pattaya: 2900, huahin: 3250, khaoyai: 3200, ayutthaya: 2600, rayong: 3300, kanchanaburi: 3100 },
-      v9: { bangkok: 2700, pattaya: 3500, huahin: 4375, khaoyai: 3700, ayutthaya: 3500, rayong: 4200, kanchanaburi: 3900 },
-      v8: { bangkok: 3200, pattaya: 3800, huahin: 4700, khaoyai: 4200, ayutthaya: 4000, rayong: 4700, kanchanaburi: 4400 },
-      alphard: { bangkok: 6700, pattaya: 7200, huahin: 7700, khaoyai: 7900, ayutthaya: 7200, rayong: 7900, kanchanaburi: 7900 }
+      sedan: { bangkok: 2200, pattaya: 2800, huahin: 3150, khaoyai: 3200, ayutthaya: 2600, rayong: 3500, kanchanaburi: 3200 },
+      suv7: { bangkok: 2400, pattaya: 3200, huahin: 3550, khaoyai: 3500, ayutthaya: 2900, rayong: 3600, kanchanaburi: 3400 },
+      v9: { bangkok: 3000, pattaya: 3800, huahin: 4675, khaoyai: 4000, ayutthaya: 3800, rayong: 4500, kanchanaburi: 4200 },
+      v8: { bangkok: 3500, pattaya: 4100, huahin: 5000, khaoyai: 4500, ayutthaya: 4300, rayong: 5000, kanchanaburi: 4700 },
+      alphard: { bangkok: 7000, pattaya: 7500, huahin: 8000, khaoyai: 8200, ayutthaya: 7500, rayong: 8200, kanchanaburi: 8200 }
     },
     chinese: {
-      sedan: { bangkok: 2700, pattaya: 3200, huahin: 3700, khaoyai: 3700, ayutthaya: 3200, rayong: 3700, kanchanaburi: 3700 },
-      suv7: { bangkok: 3200, pattaya: 3700, huahin: 4200, khaoyai: 4200, ayutthaya: 3700, rayong: 4200, kanchanaburi: 4200 },
-      v9: { bangkok: 3700, pattaya: 4200, huahin: 4700, khaoyai: 4700, ayutthaya: 4200, rayong: 4700, kanchanaburi: 4700 },
-      v8: { bangkok: 4200, pattaya: 4700, huahin: 5200, khaoyai: 5200, ayutthaya: 4700, rayong: 5200, kanchanaburi: 5200 },
-      alphard: { bangkok: 7200, pattaya: 7700, huahin: 8200, khaoyai: 8400, ayutthaya: 7700, rayong: 8400, kanchanaburi: 8400 }
+      sedan: { bangkok: 3000, pattaya: 3500, huahin: 4000, khaoyai: 4000, ayutthaya: 3500, rayong: 4000, kanchanaburi: 4000 },
+      suv7: { bangkok: 3500, pattaya: 4000, huahin: 4500, khaoyai: 4500, ayutthaya: 4000, rayong: 4500, kanchanaburi: 4500 },
+      v9: { bangkok: 4000, pattaya: 4500, huahin: 5000, khaoyai: 5000, ayutthaya: 4500, rayong: 5000, kanchanaburi: 5000 },
+      v8: { bangkok: 4500, pattaya: 5000, huahin: 5500, khaoyai: 5500, ayutthaya: 5000, rayong: 5500, kanchanaburi: 5500 },
+      alphard: { bangkok: 7500, pattaya: 8000, huahin: 8500, khaoyai: 8700, ayutthaya: 8000, rayong: 8700, kanchanaburi: 8700 }
     }
   },
 
