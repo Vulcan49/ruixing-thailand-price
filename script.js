@@ -515,6 +515,9 @@ function getThaiSinglePrice(carKey, singleType, start, end, airport) {
     }
   }
   if (singleType === "normal_single") {
+    if (start === "bangkok" && end === "bangkok") {
+      return table.bangkok_city[carKey];
+    }
     if ((start === "bangkok" && end === "pattaya") || (start === "pattaya" && end === "bangkok")) {
       return table.airport_pattaya_dmk[carKey];
     }
@@ -529,6 +532,12 @@ function getThaiSinglePrice(carKey, singleType, start, end, airport) {
     }
     if ((start === "bangkok" && end === "ayutthaya") || (start === "ayutthaya" && end === "bangkok")) {
       return table.airport_ayutthaya_bkk[carKey];
+    }
+    if ((start === "bangkok" && end === "banphe") || (start === "banphe" && end === "bangkok")) {
+      return table.bangkok_banphe[carKey] ?? null;
+    }
+    if ((start === "bangkok" && end === "kohchang") || (start === "kohchang" && end === "bangkok")) {
+      return table.bangkok_kohchang[carKey] ?? null;
     }
   }
   return null;
