@@ -80,6 +80,9 @@ const APP_DATA = {
     { value: "kanchanaburi", label: "北碧" },
     { value: "ayutthaya", label: "大城" },
     { value: "danuen", label: "丹嫩沙多" },
+    { value: "maeklong_nakhonpathom", label: "美攻铁路/水上市场/古城72府/三神象/佛统" },
+    { value: "prachinburi", label: "巴真" },
+    { value: "chanthaburi", label: "尖竹汶" },
     { value: "banphe", label: "班配码头" },
     { value: "kohchang", label: "象岛" },
     { value: "khaoyai", label: "考艾" }
@@ -99,7 +102,7 @@ const APP_DATA = {
       suv7: { bangkok: 3500, pattaya: 4000, huahin: 4500, khaoyai: 4500, ayutthaya: 4000, danuen: null, banphe: null, kohchang: null, rayong: 4500, kanchanaburi: 4500 },
       v9: { bangkok: 4000, pattaya: 4500, huahin: 5000, khaoyai: 5000, ayutthaya: 4500, danuen: null, banphe: null, kohchang: null, rayong: 5000, kanchanaburi: 5000 },
       v9_old: { bangkok: 4000, pattaya: 4500, huahin: 5000, khaoyai: 5000, ayutthaya: 4500, danuen: null, banphe: null, kohchang: null, rayong: 5000, kanchanaburi: 5000 },
-      v8: { bangkok: 4500, pattaya: 5000, huahin: 5500, khaoyai: 5500, ayutthaya: 5000, danuen: null, banphe: null, kohchang: null, rayong: 5500, kanchanaburi: 5500 },
+      v8: { bangkok: 4500, pattaya: 5000, huahin: 6500, khaoyai: 5500, ayutthaya: 4500, danuen: 5000, maeklong_nakhonpathom: 5000, prachinburi: 6000, chanthaburi: 6500, banphe: null, kohchang: null, rayong: 5500, kanchanaburi: 6500 },
       alphard: { bangkok: 7000, pattaya: 7500, huahin: 8500, khaoyai: null, ayutthaya: 7500, danuen: 7500, banphe: null, kohchang: null, rayong: 8000, kanchanaburi: 8500 }
     }
   },
