@@ -400,7 +400,7 @@ function refreshTripTitles() {
 function getOvertimeMeta() {
   const carKey = document.getElementById("carType").value;
   if (carKey === "sedan" || carKey === "suv7") return APP_DATA.extras.charter.overtimeSedanSuv;
-  if (carKey === "v8" || carKey === "v9") return APP_DATA.extras.charter.overtimeVan;
+  if (carKey === "v8" || carKey === "v9" || carKey === "v9_old") return APP_DATA.extras.charter.overtimeVan;
   return APP_DATA.extras.charter.overtimeAlphard;
 }
 
