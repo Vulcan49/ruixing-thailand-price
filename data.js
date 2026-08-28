@@ -69,23 +69,24 @@ const APP_DATA = {
     { value: "huahin", label: "华欣" },
     { value: "kanchanaburi", label: "北碧" },
     { value: "ayutthaya", label: "大城" },
+    { value: "danuen", label: "丹嫩沙多" },
     { value: "khaoyai", label: "考艾" }
   ],
 
   charterBasePrice: {
     thai: {
-      sedan: { bangkok: 2200, pattaya: 2800, huahin: 3150, khaoyai: 3200, ayutthaya: 2600, rayong: 3500, kanchanaburi: 3200 },
-      suv7: { bangkok: 2400, pattaya: 3200, huahin: 3550, khaoyai: 3500, ayutthaya: 2900, rayong: 3600, kanchanaburi: 3400 },
-      v9: { bangkok: 3000, pattaya: 3800, huahin: 4675, khaoyai: 4000, ayutthaya: 3800, rayong: 4500, kanchanaburi: 4200 },
-      v8: { bangkok: 3500, pattaya: 4100, huahin: 5000, khaoyai: 4500, ayutthaya: 4300, rayong: 5000, kanchanaburi: 4700 },
-      alphard: { bangkok: 7000, pattaya: 7500, huahin: 8000, khaoyai: 8200, ayutthaya: 7500, rayong: 8200, kanchanaburi: 8200 }
+      sedan: { bangkok: 2200, pattaya: 2800, huahin: 3150, khaoyai: 3200, ayutthaya: 2600, danuen: null, rayong: 3500, kanchanaburi: 3200 },
+      suv7: { bangkok: 2400, pattaya: 3200, huahin: 3550, khaoyai: 3500, ayutthaya: 2900, danuen: null, rayong: 3600, kanchanaburi: 3400 },
+      v9: { bangkok: 3000, pattaya: 3800, huahin: 4675, khaoyai: 4000, ayutthaya: 3800, danuen: null, rayong: 4500, kanchanaburi: 4200 },
+      v8: { bangkok: 3500, pattaya: 4100, huahin: 5000, khaoyai: 4500, ayutthaya: 4300, danuen: null, rayong: 5000, kanchanaburi: 4700 },
+      alphard: { bangkok: 7000, pattaya: 7500, huahin: 8500, khaoyai: null, ayutthaya: 7500, danuen: 7500, rayong: 8000, kanchanaburi: 8500 }
     },
     chinese: {
-      sedan: { bangkok: 3000, pattaya: 3500, huahin: 4000, khaoyai: 4000, ayutthaya: 3500, rayong: 4000, kanchanaburi: 4000 },
-      suv7: { bangkok: 3500, pattaya: 4000, huahin: 4500, khaoyai: 4500, ayutthaya: 4000, rayong: 4500, kanchanaburi: 4500 },
-      v9: { bangkok: 4000, pattaya: 4500, huahin: 5000, khaoyai: 5000, ayutthaya: 4500, rayong: 5000, kanchanaburi: 5000 },
-      v8: { bangkok: 4500, pattaya: 5000, huahin: 5500, khaoyai: 5500, ayutthaya: 5000, rayong: 5500, kanchanaburi: 5500 },
-      alphard: { bangkok: 7500, pattaya: 8000, huahin: 8500, khaoyai: 8700, ayutthaya: 8000, rayong: 8700, kanchanaburi: 8700 }
+      sedan: { bangkok: 3000, pattaya: 3500, huahin: 4000, khaoyai: 4000, ayutthaya: 3500, danuen: null, rayong: 4000, kanchanaburi: 4000 },
+      suv7: { bangkok: 3500, pattaya: 4000, huahin: 4500, khaoyai: 4500, ayutthaya: 4000, danuen: null, rayong: 4500, kanchanaburi: 4500 },
+      v9: { bangkok: 4000, pattaya: 4500, huahin: 5000, khaoyai: 5000, ayutthaya: 4500, danuen: null, rayong: 5000, kanchanaburi: 5000 },
+      v8: { bangkok: 4500, pattaya: 5000, huahin: 5500, khaoyai: 5500, ayutthaya: 5000, danuen: null, rayong: 5500, kanchanaburi: 5500 },
+      alphard: { bangkok: 7000, pattaya: 7500, huahin: 8500, khaoyai: null, ayutthaya: 7500, danuen: 7500, rayong: 8000, kanchanaburi: 8500 }
     }
   },
 
@@ -104,11 +105,14 @@ const APP_DATA = {
 
   singleRoutePrices: {
     chinese: {
+      airport_bangkok: { alphard: 3000 },
+      airport_pattaya_bkk: { alphard: 6000 },
+      airport_pattaya_dmk: { alphard: 6500 },
       bangkok_city: { sedan: 1000, suv7: 1000, v9: 1500, v8: 2000, alphard: 3500 },
       bangkok_pattaya: { sedan: 2000, suv7: 2000, v9: 2500, v8: 3000, alphard: null }
     },
     thai: {
-      airport_bangkok: { sedan: 550, suv7: 680, v8: 1050, v9: 950, alphard: 3500 },
+      airport_bangkok: { sedan: 550, suv7: 680, v8: 1050, v9: 950, alphard: 3000 },
       airport_pattaya_bkk: { sedan: 1150, suv7: 1250, v8: 2400, v9: 1900, alphard: 6000 },
       airport_pattaya_dmk: { sedan: 1450, suv7: 1550, v8: 2850, v9: 2250, alphard: 6500 },
       airport_huahin_bkk: { sedan: 1950, suv7: 2050, v8: 3450, v9: 2800, alphard: null },
@@ -143,9 +147,9 @@ const APP_DATA = {
         note: "超时超过30分钟按1小时计算。"
       },
       overtimeAlphard: {
-        label: "超时费（阿尔法 250泰铢/半小时）",
+        label: "超时费（阿尔法 30分钟250泰铢 / 1小时500泰铢）",
         price: 250,
-        note: "阿尔法按半小时累计计算。"
+        note: "按30分钟累计：数量1为250泰铢，数量2为1小时500泰铢。"
       },
       siam: {
         label: "暹罗古城 +300",
