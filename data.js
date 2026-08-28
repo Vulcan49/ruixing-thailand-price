@@ -22,7 +22,7 @@ const APP_DATA = {
     },
     v8: {
       key: "v8",
-      name: "V8面包车",
+      name: "新款V8面包车",
       images: ["images/van8-1.jpg"],
       suggestedSeatsText: "4-8人",
       suggestedLuggageText: "8件",
@@ -32,7 +32,7 @@ const APP_DATA = {
     },
     v9: {
       key: "v9",
-      name: "V9面包车",
+      name: "新款V9面包车",
       images: ["images/van9-1.jpg"],
       suggestedSeatsText: "4-9人",
       suggestedLuggageText: "9件",
@@ -70,23 +70,25 @@ const APP_DATA = {
     { value: "kanchanaburi", label: "北碧" },
     { value: "ayutthaya", label: "大城" },
     { value: "danuen", label: "丹嫩沙多" },
+    { value: "banphe", label: "班配码头" },
+    { value: "kohchang", label: "象岛" },
     { value: "khaoyai", label: "考艾" }
   ],
 
   charterBasePrice: {
     thai: {
-      sedan: { bangkok: 2200, pattaya: 2800, huahin: 3150, khaoyai: 3200, ayutthaya: 2600, danuen: null, rayong: 3500, kanchanaburi: 3200 },
-      suv7: { bangkok: 2400, pattaya: 3200, huahin: 3550, khaoyai: 3500, ayutthaya: 2900, danuen: null, rayong: 3600, kanchanaburi: 3400 },
-      v9: { bangkok: 3000, pattaya: 3800, huahin: 4675, khaoyai: 4000, ayutthaya: 3800, danuen: null, rayong: 4500, kanchanaburi: 4200 },
-      v8: { bangkok: 3500, pattaya: 4100, huahin: 5000, khaoyai: 4500, ayutthaya: 4300, danuen: null, rayong: 5000, kanchanaburi: 4700 },
-      alphard: { bangkok: 7000, pattaya: 7500, huahin: 8500, khaoyai: null, ayutthaya: 7500, danuen: 7500, rayong: 8000, kanchanaburi: 8500 }
+      sedan: { bangkok: 2200, pattaya: 2800, huahin: 3150, khaoyai: 3200, ayutthaya: 2600, danuen: null, banphe: null, kohchang: null, rayong: 3500, kanchanaburi: 3200 },
+      suv7: { bangkok: 2400, pattaya: 3200, huahin: 3550, khaoyai: 3500, ayutthaya: 2900, danuen: null, banphe: null, kohchang: null, rayong: 3600, kanchanaburi: 3400 },
+      v9: { bangkok: 3000, pattaya: 3800, huahin: 4675, khaoyai: 4000, ayutthaya: 3800, danuen: null, banphe: null, kohchang: null, rayong: 4500, kanchanaburi: 4200 },
+      v8: { bangkok: 3500, pattaya: 4100, huahin: 5000, khaoyai: 4500, ayutthaya: 4300, danuen: null, banphe: null, kohchang: null, rayong: 5000, kanchanaburi: 4700 },
+      alphard: { bangkok: 7000, pattaya: 7500, huahin: 8500, khaoyai: null, ayutthaya: 7500, danuen: 7500, banphe: null, kohchang: null, rayong: 8000, kanchanaburi: 8500 }
     },
     chinese: {
-      sedan: { bangkok: 3000, pattaya: 3500, huahin: 4000, khaoyai: 4000, ayutthaya: 3500, danuen: null, rayong: 4000, kanchanaburi: 4000 },
-      suv7: { bangkok: 3500, pattaya: 4000, huahin: 4500, khaoyai: 4500, ayutthaya: 4000, danuen: null, rayong: 4500, kanchanaburi: 4500 },
-      v9: { bangkok: 4000, pattaya: 4500, huahin: 5000, khaoyai: 5000, ayutthaya: 4500, danuen: null, rayong: 5000, kanchanaburi: 5000 },
-      v8: { bangkok: 4500, pattaya: 5000, huahin: 5500, khaoyai: 5500, ayutthaya: 5000, danuen: null, rayong: 5500, kanchanaburi: 5500 },
-      alphard: { bangkok: 7000, pattaya: 7500, huahin: 8500, khaoyai: null, ayutthaya: 7500, danuen: 7500, rayong: 8000, kanchanaburi: 8500 }
+      sedan: { bangkok: 3000, pattaya: 3500, huahin: 4000, khaoyai: 4000, ayutthaya: 3500, danuen: null, banphe: null, kohchang: null, rayong: 4000, kanchanaburi: 4000 },
+      suv7: { bangkok: 3500, pattaya: 4000, huahin: 4500, khaoyai: 4500, ayutthaya: 4000, danuen: null, banphe: null, kohchang: null, rayong: 4500, kanchanaburi: 4500 },
+      v9: { bangkok: 4000, pattaya: 4500, huahin: 5000, khaoyai: 5000, ayutthaya: 4500, danuen: null, banphe: null, kohchang: null, rayong: 5000, kanchanaburi: 5000 },
+      v8: { bangkok: 4500, pattaya: 5000, huahin: 5500, khaoyai: 5500, ayutthaya: 5000, danuen: null, banphe: null, kohchang: null, rayong: 5500, kanchanaburi: 5500 },
+      alphard: { bangkok: 7000, pattaya: 7500, huahin: 8500, khaoyai: null, ayutthaya: 7500, danuen: 7500, banphe: null, kohchang: null, rayong: 8000, kanchanaburi: 8500 }
     }
   },
 
@@ -112,16 +114,19 @@ const APP_DATA = {
       bangkok_pattaya: { sedan: 2000, suv7: 2000, v9: 2500, v8: 3000, alphard: null }
     },
     thai: {
-      airport_bangkok: { sedan: 550, suv7: 680, v8: 1050, v9: 950, alphard: 3000 },
-      airport_pattaya_bkk: { sedan: 1150, suv7: 1250, v8: 2400, v9: 1900, alphard: 6000 },
-      airport_pattaya_dmk: { sedan: 1450, suv7: 1550, v8: 2850, v9: 2250, alphard: 6500 },
-      airport_huahin_bkk: { sedan: 1950, suv7: 2050, v8: 3450, v9: 2800, alphard: null },
-      airport_huahin_dmk: { sedan: 1950, suv7: 2100, v8: 3450, v9: 2850, alphard: null },
-      airport_ayutthaya_bkk: { sedan: 1150, suv7: 1250, v8: 2500, v9: 2050, alphard: null },
-      airport_ayutthaya_dmk: { sedan: 950, suv7: 1050, v8: 2450, v9: 1800, alphard: null },
-      airport_rayong_bkk: { sedan: 1700, suv7: 1800, v8: 2900, v9: 2450, alphard: null },
-      airport_rayong_dmk: { sedan: 1900, suv7: 2000, v8: 3450, v9: 2850, alphard: null },
-      bangkok_kanchanaburi: { sedan: 1950, suv7: 2180, v8: 3500, v9: 3050, alphard: null }
+      bangkok_city: { sedan: 530, suv7: 640, v8: 1350, v9: 1150, alphard: null },
+      airport_bangkok: { sedan: 550, suv7: 680, v8: 1350, v9: 1150, alphard: 3000 },
+      airport_pattaya_bkk: { sedan: 1150, suv7: 1250, v8: 2850, v9: 2650, alphard: 6000 },
+      airport_pattaya_dmk: { sedan: 1450, suv7: 1550, v8: 3150, v9: 2950, alphard: 6500 },
+      airport_huahin_bkk: { sedan: 1950, suv7: 2050, v8: 3800, v9: 3600, alphard: null },
+      airport_huahin_dmk: { sedan: 1950, suv7: 2100, v8: 3850, v9: 3650, alphard: null },
+      airport_ayutthaya_bkk: { sedan: 1150, suv7: 1250, v8: 2850, v9: 2650, alphard: null },
+      airport_ayutthaya_dmk: { sedan: 950, suv7: 1050, v8: 2650, v9: 2450, alphard: null },
+      airport_rayong_bkk: { sedan: 1700, suv7: 1800, v8: 3500, v9: 3200, alphard: null },
+      airport_rayong_dmk: { sedan: 1900, suv7: 2000, v8: 3900, v9: 3700, alphard: null },
+      bangkok_kanchanaburi: { sedan: 1950, suv7: 2180, v8: 3800, v9: 3600, alphard: null },
+      bangkok_banphe: { v8: 3650, v9: 3450 },
+      bangkok_kohchang: { v8: 5600, v9: 5400 }
     }
   },
 
